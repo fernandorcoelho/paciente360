@@ -1,0 +1,9 @@
+.contentContainer {
+  max-width: 1143px;
+  margin: 0 auto;
+  height: calc(100vh - 8.5rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

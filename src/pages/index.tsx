@@ -1,5 +1,13 @@
+import Head from "next/head";
+
 export default function Home() {
   return (
-    <h1>Hello Fasters!</h1>
+    <>
+      <Head>
+        <title>Home | Paciente 360º</title>
+      </Head>
+
+      <h1>Hello Fasters!</h1>
+    </>
   );
 }
