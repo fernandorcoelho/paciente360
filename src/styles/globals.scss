@@ -52,3 +52,7 @@ a {
 li {
   list-style-type: none;
 }
+
+svg {
+  flex-shrink: 0;
+}

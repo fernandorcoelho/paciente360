@@ -1,5 +1,7 @@
 .platformSectionWrapper {
   position: relative;
+  z-index: 10;
+  background-color: var(--white);
 }
 
 .platformSectionContainer {
@@ -12,7 +14,7 @@
   height: 100vh;
 
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 3rem 0;
 }
 
 .linearGradientBg {

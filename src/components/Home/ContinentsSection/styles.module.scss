@@ -1,0 +1,42 @@
+.continentsSectionWrapper {
+  position: relative;
+  z-index: 10;
+  background-color: var(--red-500);
+
+  display: flex;
+  align-items: center;
+}
+
+.continentsSectionContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  width: 100%;
+  max-width: 1143px;
+  height: 100vh;
+
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.linearGradientBg {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to left, #fc7562, #fc6f5b, #fc6955, #fb634e, #fb5c47);
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

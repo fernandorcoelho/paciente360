@@ -8,7 +8,7 @@ import Image from 'next/image';
 export const PlatformSection = () => {
   return (
     <div className={styles.platformSectionWrapper}>
-      <div className={styles.linearGradientBg}></div> {/* Linear Gradient Background */}
+      <div className={styles.linearGradientBg} /> {/* Linear Gradient Background */}
 
       <div className={styles.platformSectionContainer}>
 
