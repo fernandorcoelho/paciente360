@@ -1,13 +1,13 @@
-import Head from "next/head";
-import Image from "next/image";
-import { HeroSection } from "../components/Home/HeroSection";
-import { PlatformSection } from "../components/Home/PlatformSection";
-import { SegmentsSection } from "../components/Home/SegmentsSection";
-import { TryoutSection } from "../components/Home/TryoutSection";
+import Head from 'next/head';
+import Image from 'next/image';
+import { HeroSection } from '../components/Home/HeroSection';
+import { PlatformSection } from '../components/Home/PlatformSection';
+import { SegmentsSection } from '../components/Home/SegmentsSection';
+import { TryoutSection } from '../components/Home/TryoutSection';
+import { ContinentsSection } from '../components/Home/ContinentsSection';
 import deniseImg from '../../public/images/denise.png';
 
 import styles from './home.module.scss';
-import { ContinentsSection } from "../components/Home/ContinentsSection";
 
 export default function Home() {
   return (

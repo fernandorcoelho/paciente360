@@ -6,14 +6,15 @@ export const SegmentsSection = () => {
     <div className={styles.segmentsSectionContainer}>
       <div className={styles.segmentsSection}>
         <span>
-          Somos a maior<br />biblioteca de casos<br />
+          Somos a maior
+          <br />
+          biblioteca de casos
+          <br />
           <strong>clínicos do mundo</strong>
         </span>
-
         <p>Atuamos em diversos segmentos.</p>
-
-        <SegmentsBox /> {/* Componentes dos segmentos */}        
+        <SegmentsBox /> {/* Componentes dos segmentos */}
       </div>
     </div>
   );
-}
+};

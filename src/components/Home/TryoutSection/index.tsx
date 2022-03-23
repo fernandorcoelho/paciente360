@@ -9,8 +9,8 @@ export const TryoutSection = () => {
 
       <div className={styles.tryoutSection}>
         <span>
-          Projetamos <strong>simulações de cenários clínicos</strong>, afim de 
-          permitir que alunos integrajam com pacientes reais (padronizados), em 
+          Projetamos <strong>simulações de cenários clínicos</strong>, afim de
+          permitir que alunos integrajam com pacientes reais (padronizados), em
           um ambiente seguro e realista.
         </span>
 
@@ -21,4 +21,4 @@ export const TryoutSection = () => {
       </div>
     </div>
   );
-}
+};
