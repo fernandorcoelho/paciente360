@@ -97,3 +97,75 @@ export const TrialIcon = ({ size }: IconsProps) => {
     </svg>
   );
 }
+
+export const ArrowRightIcon = ({ size, color, ...rest }: IconsProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "18"}
+      height={size - 2 || "16"}
+      viewBox="0 0 18 16"
+      fill="none"
+      {...rest}
+    >
+      <path d="M10 1L17 8L10 15M1 8H17H1Z" stroke={color || "#FB5C47"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  );
+}
+
+export const MedicalBookIcon = ({ size, color, ...rest }: IconsProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "48"}
+      height={size || "48"}
+      viewBox="0 0 48 48"
+      fill="none"
+      {...rest}
+    >
+      <path d="M8 10V38C8 40.2091 9.79086 42 12 42H36C38.2091 42 40 40.2091 40 38V18C40 15.7909 38.2091 14 36 14H12C9.79086 14 8 12.2091 8 10V10C8 7.79086 9.79086 6 12 6H38" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M31.5 26.5C31.5 25.6716 30.8284 25 30 25H27V22C27 21.1716 26.3284 20.5 25.5 20.5H22.5C21.6716 20.5 21 21.1716 21 22V25H18C17.1716 25 16.5 25.6716 16.5 26.5V29.5C16.5 30.3284 17.1716 31 18 31H21V34C21 34.8284 21.6716 35.5 22.5 35.5H25.5C26.3284 35.5 27 34.8284 27 34V31H30C30.8284 31 31.5 30.3284 31.5 29.5V26.5Z" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  );
+}
+
+export const ScienceIcon = ({ size, color, ...rest }: IconsProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "50"}
+      height={size || "50"}
+      viewBox="0 0 50 50"
+      fill="none"
+      {...rest}
+    >
+      <path d="M41.0073 16.9966V10.9941C41.0073 8.78404 39.2157 6.99243 37.0057 6.99243H10.9948C8.78477 6.99243 6.99316 8.78404 6.99316 10.9941V39.0058C6.99316 41.2158 8.78477 43.0074 10.9948 43.0074H20.999" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19.498 31.0024H22.9995" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19.498 22.9992H25.0003" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19.498 15.246H33.0037" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40.7088 22.9992H31.7051" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M39.2057 22.9993V30.5664L44.3939 38.8899C45.1622 40.1224 45.2024 41.6744 44.4989 42.945C43.7955 44.2156 42.4588 45.0054 41.0065 45.0084H31.4125C29.9576 45.0104 28.6163 44.2227 27.9094 42.9511C27.2025 41.6796 27.2414 40.1245 28.011 38.8899L33.1992 30.5664V22.9993" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M39.4803 31.0024H32.9336" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.2455 31.2525C13.3837 31.2525 13.4956 31.1405 13.4956 31.0024C13.4956 30.8642 13.3837 30.7523 13.2455 30.7523C13.1074 30.7523 12.9954 30.8642 12.9954 31.0024C12.9954 31.1405 13.1074 31.2525 13.2455 31.2525" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.2455 23.2493C13.3837 23.2493 13.4956 23.1373 13.4956 22.9992C13.4956 22.8611 13.3837 22.7491 13.2455 22.7491C13.1074 22.7491 12.9954 22.8611 12.9954 22.9992C12.9954 23.1373 13.1074 23.2493 13.2455 23.2493" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.2455 15.4961C13.3837 15.4961 13.4956 15.3842 13.4956 15.246C13.4956 15.1079 13.3837 14.9959 13.2455 14.9959C13.1074 14.9959 12.9954 15.1079 12.9954 15.246C12.9954 15.3842 13.1074 15.4961 13.2455 15.4961" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  );
+}
+
+export const HealthIcon = ({ size, color, ...rest }: IconsProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "48"}
+      height={size || "48"}
+      viewBox="0 0 48 48"
+      fill="none"
+      {...rest}
+    >
+      <path d="M20 8H22C23.1046 8 24 8.89543 24 10V18C24 20.6522 22.9464 23.1957 21.0711 25.0711C19.1957 26.9464 16.6522 28 14 28V28C11.3478 28 8.8043 26.9464 6.92893 25.0711C5.05357 23.1957 4 20.6522 4 18V10C4 8.89543 4.89543 8 6 8H8" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="40" cy="34" r="4" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 30V21C40 18.2386 37.7614 16 35 16V16C32.2386 16 30 18.2386 30 21V34C30 38.4183 26.4183 42 22 42V42C17.5817 42 14 38.4183 14 34L14.0001 28" stroke={color || "#6CC2D5"} stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  );
+}

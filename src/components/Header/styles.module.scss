@@ -7,7 +7,7 @@
   max-width: 1143px;
   height: 4.375rem;
   margin: 0 auto;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0rem;
 
   display: flex;
   align-items: center;
@@ -27,6 +27,8 @@
         li {
           a {
             font: 500 0.875rem 'DM Sans';
+            user-select: none;
+            cursor: default;
 
             transition: ease-in .3s;
 
@@ -53,4 +55,5 @@
   gap: 0.25rem;
   border: 0;
   background: transparent;
+  user-select: none;
 }

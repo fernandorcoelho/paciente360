@@ -1,0 +1,73 @@
+.heroSectionContainer {
+  position: relative;
+}
+
+.linearGradientBg {
+  position: absolute;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(77.95deg, #FFFFFF 36.68%, rgba(255, 255, 255, 0.5) 54.65%, rgba(255, 255, 255, 0) 72.68%);
+}
+
+.videoContainer {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+
+  z-index: 0;
+
+  > iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  max-width: 1143px;
+  height: calc(100vh - 8.5rem);
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.125rem;
+
+  z-index: 2;
+
+  > div {
+    height: 2.25rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: var(--white);
+    font-size: 1.438rem;
+    font-weight: 700;
+    color: var(--gray-300);
+
+    > span:last-of-type {
+      color: var(--white);
+      background-color: var(--blue-700);
+      padding: 0 0.3rem;
+      margin-left: 0.3rem;
+      border-radius: 3px;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: var(--gray-300)
+  }
+}
