@@ -1,3 +1,4 @@
+import CountUp from 'react-countup';
 import worldImg from '../../../../public/images/world.png';
 import Image from 'next/image';
 
@@ -19,7 +20,8 @@ export const ContinentsSection = () => {
         <div className={styles.dataContainer}>
           <div>
             <strong>
-              <span>+</span>600
+              <span>+</span>
+              <CountUp end={600} duration={2.75} />
             </strong>
 
             <strong>
@@ -31,19 +33,17 @@ export const ContinentsSection = () => {
 
           <div>
             <strong>
-              <span>+</span>800
+              <span>+</span>
+              <CountUp end={800} duration={2.75} />
             </strong>
 
-            <strong>
-              Pessoas já
-              <br />
-              utilizaram
-            </strong>
+            <strong>Pessoas já utilizaram</strong>
           </div>
 
           <div>
             <strong>
-              <span>+</span>35
+              <span>+</span>
+              <CountUp end={35} duration={2.75} />
             </strong>
 
             <strong>Especialidades</strong>
