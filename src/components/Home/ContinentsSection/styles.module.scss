@@ -7,11 +7,9 @@
   align-items: center;
   
   width: 100%;
-  // max-width: 1143px;
-  height: 100vh;
 
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 7.125rem 0 6.5rem;
 }
 
 .continentsSectionContainer {
@@ -28,6 +26,11 @@
     font-size: 2.813rem;
     line-height: 2.5rem;
     margin-bottom: 3.438rem;
+  }
+
+  > p {
+    color: var(--white);
+    line-height: 1.5rem;
   }
 }
 
@@ -79,4 +82,20 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.prizeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.938rem;
+  padding: 0.625rem 1.063rem;
+  margin-top: 2.375rem;
+  margin-bottom: 2.688rem;
+  border-top: 1px solid var(--orange-500);
+  border-bottom: 1px solid var(--orange-500);
+
+  > strong {
+    color: var(--white);
+  }
 }

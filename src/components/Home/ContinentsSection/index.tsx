@@ -2,6 +2,7 @@ import worldImg from '../../../../public/images/world.png';
 import Image from 'next/image';
 
 import styles from './styles.module.scss';
+import { TrophyIcon } from '../../../../public/icons/Icons';
 
 export const ContinentsSection = () => {
   return (
@@ -56,6 +57,17 @@ export const ContinentsSection = () => {
             <strong>Projetos</strong>
           </div>
         </div>
+
+        <div className={styles.prizeContainer}>
+          <TrophyIcon />
+          <strong>Prêmio no Congresso Europeu de Cardiologia em Paris</strong>
+        </div>
+        {/* Imagem do mapa mundi representando continentes */}
+
+        <p>
+          Democratizamos o acesso á educação em saúde, possibilitando que
+          milhares de pessoas recebam informações de forma acessível e prática.
+        </p>
       </div>
       <div className={styles.imageContainer}>
         <Image

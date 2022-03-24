@@ -8,6 +8,8 @@ import { ContinentsSection } from '../components/Home/ContinentsSection';
 import deniseImg from '../../public/images/denise.png';
 
 import styles from './home.module.scss';
+import { DifferentialsSection } from '../components/Home/DifferentialsSection';
+import { ContactSpecialistSection } from '../components/Home/ContactSpecialistSection';
 
 export default function Home() {
   return (
@@ -29,6 +31,8 @@ export default function Home() {
       <SegmentsSection />
       <TryoutSection />
       <ContinentsSection />
+      <DifferentialsSection />
+      <ContactSpecialistSection />
     </>
   );
 }

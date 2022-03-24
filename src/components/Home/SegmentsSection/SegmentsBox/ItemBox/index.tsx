@@ -29,4 +29,4 @@ export const ItemBox = ({ icon, title, description, link }: ItemBoxProps) => {
       </Link>
     </div>
   );
-}
+};
