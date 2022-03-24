@@ -1,11 +1,12 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import {
   BrazilFlag,
   ChevronDownIcon,
-  Logo,
   TrialIcon
 } from '../../../public/icons/Icons';
 import { Button } from '../Button';
+import logoImg from '../../../public/images/logo.png';
 
 import styles from './styles.module.scss';
 
@@ -34,8 +35,15 @@ export function Header() {
       }
     >
       <div className={styles.headerContent}>
-        <Logo /> {/* Lado esquerdo */}
-        <div>
+        <Image
+          src={logoImg}
+          alt="Logo"
+          objectFit="contain"
+          // height={60}
+          width={120}
+        />
+        {/* Lado esquerdo */}
+        <div className={styles.navItems}>
           <nav>
             <ul>
               <li>

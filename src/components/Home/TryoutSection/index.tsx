@@ -1,11 +1,16 @@
-import { ArrowRightIcon, WhiteLogo } from '../../../../public/icons/Icons';
+import Image from 'next/image';
+import { ArrowRightIcon } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
+import whiteLogoImg from '../../../../public/images/white-logo.png';
+
 import styles from './styles.module.scss';
 
 export const TryoutSection = () => {
   return (
     <div className={styles.tryoutSectionContainer}>
-      <WhiteLogo />
+      <div className={styles.imgContainer}>
+        <Image src={whiteLogoImg} alt="Logo branca" objectFit="cover" />
+      </div>
 
       <div className={styles.tryoutSection}>
         <span>
