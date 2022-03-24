@@ -60,3 +60,7 @@ li {
 svg {
   flex-shrink: 0;
 }
+
+img, button, li {
+  user-select: none;
+}

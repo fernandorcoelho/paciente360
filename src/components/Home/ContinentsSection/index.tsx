@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import worldImg from '../../../../public/images/world.png';
 import Image from 'next/image';
@@ -6,6 +9,35 @@ import styles from './styles.module.scss';
 import { TrophyIcon } from '../../../../public/icons/Icons';
 
 export const ContinentsSection = () => {
+  // Início: Animação de contador
+  const counterVariants = {
+    visible: { opacity: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0 }
+  };
+
+  function DinamicCountUp(end: number) {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+      if (inView) {
+        controls.start('visible');
+      }
+    }, [controls, inView]);
+
+    return (
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={counterVariants}
+      >
+        {inView && <CountUp end={end} duration={2.75} delay={0} />}
+      </motion.div>
+    );
+  }
+  // Fim: Animação de contador
+
   return (
     <section className={styles.continentsSectionWrapper} id="casos">
       <div className={styles.linearGradientBg} />
@@ -21,7 +53,7 @@ export const ContinentsSection = () => {
           <div>
             <strong>
               <span>+</span>
-              <CountUp end={600} duration={2.75} />
+              {DinamicCountUp(600)}
             </strong>
 
             <strong>
@@ -34,7 +66,7 @@ export const ContinentsSection = () => {
           <div>
             <strong>
               <span>+</span>
-              <CountUp end={800} duration={2.75} />
+              {DinamicCountUp(800)}
             </strong>
 
             <strong>Pessoas já utilizaram</strong>
@@ -43,7 +75,7 @@ export const ContinentsSection = () => {
           <div>
             <strong>
               <span>+</span>
-              <CountUp end={35} duration={2.75} />
+              {DinamicCountUp(35)}
             </strong>
 
             <strong>Especialidades</strong>

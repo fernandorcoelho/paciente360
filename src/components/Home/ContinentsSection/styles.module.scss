@@ -47,11 +47,13 @@
     gap: 1.125rem;
 
     strong:first-child {
+      display: flex;
+      align-items: center;
       font-size: 3rem;
       line-height: 3.875rem;
       color: var(--white);
 
-      > span:first-of-type {
+      > span {
         color: var(--orange-500);
       }
     }
