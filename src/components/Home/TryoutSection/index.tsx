@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 export const TryoutSection = () => {
   return (
-    <div className={styles.tryoutSectionContainer}>
+    <section className={styles.tryoutSectionContainer} id="para-quem">
       <div className={styles.imgContainer}>
         <Image src={whiteLogoImg} alt="Logo branca" objectFit="cover" />
       </div>
@@ -24,6 +24,7 @@ export const TryoutSection = () => {
           <ArrowRightIcon />
         </Button>
       </div>
-    </div>
+      {/* Lado direito */}
+    </section>
   );
 };

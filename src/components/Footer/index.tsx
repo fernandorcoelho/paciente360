@@ -67,32 +67,32 @@ export const Footer = () => {
     {
       id: 0,
       text: 'Home',
-      link: '#'
+      link: '#hero'
     },
     {
       id: 1,
       text: 'Soluções',
-      link: '#'
+      link: '#solucoes'
     },
     {
       id: 2,
       text: 'A Plataforma',
-      link: '#'
+      link: '#plataforma'
     },
     {
       id: 3,
       text: 'Para quem',
-      link: '#'
+      link: '#para-quem'
     },
     {
       id: 4,
       text: 'Casos',
-      link: '#'
+      link: '#casos'
     },
     {
       id: 5,
       text: 'Fique por dentro',
-      link: '#'
+      link: '#fique-por-dentro'
     }
   ];
 
@@ -157,10 +157,12 @@ export const Footer = () => {
 
       <div className={styles.bottomContainer}>
         <p>Paciente 360 • 2022 Todos os direitos reservados</p>
-        <button type="button">
-          <CircleArrowUpIcon />
-          <p>Voltar ao topo</p>
-        </button>
+        <Link href="#hero">
+          <button type="button">
+            <CircleArrowUpIcon />
+            <p>Voltar ao topo</p>
+          </button>
+        </Link>
         <div>
           <AbedIcon />
           <div>

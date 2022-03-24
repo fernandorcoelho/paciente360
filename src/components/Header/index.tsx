@@ -9,6 +9,13 @@ import { Button } from '../Button';
 import logoImg from '../../../public/images/logo.png';
 
 import styles from './styles.module.scss';
+import Link from 'next/link';
+
+type NavItemsProps = {
+  id: number;
+  text: string;
+  link: string;
+};
 
 export function Header() {
   const [stickyClass, setStickyClass] = useState('');
@@ -25,6 +32,39 @@ export function Header() {
       windowHeight > 70 ? setStickyClass('sticky-nav') : setStickyClass('');
     }
   };
+
+  const navItemsArr: NavItemsProps[] = [
+    {
+      id: 0,
+      text: 'Soluções',
+      link: '#solucoes'
+    },
+    {
+      id: 1,
+      text: 'A plataforma',
+      link: '#plataforma'
+    },
+    {
+      id: 2,
+      text: 'Para quem',
+      link: '#para-quem'
+    },
+    {
+      id: 3,
+      text: 'Casos',
+      link: '#casos'
+    },
+    {
+      id: 4,
+      text: 'Fique por dentro',
+      link: '#fique-por-dentro'
+    },
+    {
+      id: 5,
+      text: 'Contato',
+      link: '#contato'
+    }
+  ];
 
   return (
     <header
@@ -46,24 +86,13 @@ export function Header() {
         <div className={styles.navItems}>
           <nav>
             <ul>
-              <li>
-                <a href="#solucoes">Soluções</a>
-              </li>
-              <li>
-                <a href="#plataforma">A plataforma</a>
-              </li>
-              <li>
-                <a href="#para-quem">Para quem</a>
-              </li>
-              <li>
-                <a href="#casos">Casos</a>
-              </li>
-              <li>
-                <a href="#fique-por-dentro">Fique por dentro</a>
-              </li>
-              <li>
-                <a href="#contato">Contato</a>
-              </li>
+              {navItemsArr.map((item) => (
+                <Link key={item.id} href={item.link}>
+                  <li>
+                    <p>{item.text}</p>
+                  </li>
+                </Link>
+              ))}
             </ul>
           </nav>{' '}
           {/* Itens de navegação */}

@@ -35,10 +35,10 @@
       gap: 2.375rem;
 
       li {
-        a {
+        p {
           font: 500 0.875rem 'DM Sans';
           user-select: none;
-          cursor: default;
+          cursor: pointer;
 
           transition: ease-in .3s;
 

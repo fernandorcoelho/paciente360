@@ -1,25 +1,20 @@
 import Image from 'next/image';
 import { ArrowRightIcon, CirclesIcon } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
-import macbookImg from '../../../../public/images/macbook.png';
+import notebookGif from '../../../../public/gifs/notebook-animation.gif';
 
 import styles from './styles.module.scss';
 
 export const ContactSpecialistSection = () => {
   return (
-    <div className={styles.contactSpecialistWrapper}>
+    <section className={styles.contactSpecialistWrapper} id="contato">
       <div className={styles.gifContainer}>
-        {/* <iframe
-          frameBorder={0}
-          allowFullScreen
-          allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-          src="https://youtube.com/embed/qXC4AyjRikg?playlist=qXC4AyjRikg&autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&mute=1&modestbranding=1&rel=0"
-        /> */}
         <div className={styles.imgContainer}>
-          <Image src={macbookImg} alt="Macbook" />
+          <Image src={notebookGif} alt="Macbook" />
         </div>
         <CirclesIcon />
       </div>
+      {/* Lado esquerdo contendo o gif */}
 
       <div className={styles.contactSpecialistContainer}>
         <div>
@@ -46,6 +41,7 @@ export const ContactSpecialistSection = () => {
           </strong>
         </p>
       </div>
-    </div>
+      {/* Lado direito contento CTA Button e textos */}
+    </section>
   );
 };

@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 export const HeroSection = () => {
   return (
-    <main className={styles.heroSectionContainer}>
+    <main className={styles.heroSectionContainer} id="hero">
       <div className={styles.linearGradientBg}></div>
       {/* Linear Gradient Background */}
       <div className={styles.videoContainer}>
@@ -25,7 +25,7 @@ export const HeroSection = () => {
         </div>
 
         <p>
-          A
+          A{' '}
           <strong>
             única plataforma de <br /> simulação
           </strong>

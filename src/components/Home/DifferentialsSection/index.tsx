@@ -11,7 +11,10 @@ import styles from './styles.module.scss';
 
 export const DifferentialsSection = () => {
   return (
-    <div className={styles.differentialsSectionWrapper}>
+    <section
+      className={styles.differentialsSectionWrapper}
+      id="fique-por-dentro"
+    >
       <div className={styles.differentialsSectionContainer}>
         <span>
           <strong>Diferenciais</strong> da
@@ -22,8 +25,9 @@ export const DifferentialsSection = () => {
           Garantimos a aprendizagem de forma prática e interativa,
           <br /> envolvendo todas as etapas da jornada do paciente.
         </p>
-        <DifferentialsBox />
+        <DifferentialsBox /> {/* Listagem de diferenciais */}
       </div>
+      {/* Lado esquerdo com textos */}
 
       <div className={styles.imageContainer}>
         <Image
@@ -38,6 +42,7 @@ export const DifferentialsSection = () => {
           <Circle3Icon />
         </div>
       </div>
-    </div>
+      {/* Lado direito que contém imagens */}
+    </section>
   );
 };

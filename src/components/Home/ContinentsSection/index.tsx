@@ -6,7 +6,7 @@ import { TrophyIcon } from '../../../../public/icons/Icons';
 
 export const ContinentsSection = () => {
   return (
-    <div className={styles.continentsSectionWrapper}>
+    <section className={styles.continentsSectionWrapper} id="casos">
       <div className={styles.linearGradientBg} />
       {/* Linear Gradient Background */}
       <div className={styles.continentsSectionContainer}>
@@ -69,6 +69,7 @@ export const ContinentsSection = () => {
           milhares de pessoas recebam informações de forma acessível e prática.
         </p>
       </div>
+      {/* Lado esquerdo */}
       <div className={styles.imageContainer}>
         <Image
           src={worldImg}
@@ -76,6 +77,7 @@ export const ContinentsSection = () => {
           objectFit="cover"
         />
       </div>
-    </div>
+      {/* Lado direito */}
+    </section>
   );
 };

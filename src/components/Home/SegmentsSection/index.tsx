@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 
 export const SegmentsSection = () => {
   return (
-    <div className={styles.segmentsSectionContainer}>
+    <section className={styles.segmentsSectionContainer} id="plataforma">
       <div className={styles.segmentsSection}>
         <span>
           Somos a maior
@@ -15,6 +15,6 @@ export const SegmentsSection = () => {
         <p>Atuamos em diversos segmentos.</p>
         <SegmentsBox /> {/* Componentes dos segmentos */}
       </div>
-    </div>
+    </section>
   );
 };
