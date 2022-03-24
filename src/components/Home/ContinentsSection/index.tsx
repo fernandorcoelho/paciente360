@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 export const ContinentsSection = () => {
   return (
     <div className={styles.continentsSectionWrapper}>
-      <div className={styles.linearGradientBg} />{' '}
+      <div className={styles.linearGradientBg} />
       {/* Linear Gradient Background */}
       <div className={styles.continentsSectionContainer}>
         <span>
