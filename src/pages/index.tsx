@@ -10,29 +10,34 @@ import deniseImg from '../../public/images/denise.png';
 import styles from './home.module.scss';
 import { DifferentialsSection } from '../components/Home/DifferentialsSection';
 import { ContactSpecialistSection } from '../components/Home/ContactSpecialistSection';
+import { useWindowDimensions } from 'hooks/useWindowDimensions';
 
 export default function Home() {
+  const { width } = useWindowDimensions();
+
+  console.log(width);
+
   return (
     <>
       <Head>
         <title>Home | Paciente 360º</title>
       </Head>
 
-      <div className={styles.imageContainer}>
+      {/* <div className={styles.imageContainer}>
         <Image
           src={deniseImg}
           objectFit="cover"
           alt="Foto de Denise com diagnóstico"
         />
-      </div>
+      </div> */}
 
       <HeroSection />
-      <PlatformSection />
+      {/* <PlatformSection />
       <SegmentsSection />
       <TryoutSection />
       <ContinentsSection />
       <DifferentialsSection />
-      <ContactSpecialistSection />
+      <ContactSpecialistSection /> */}
     </>
   );
 }

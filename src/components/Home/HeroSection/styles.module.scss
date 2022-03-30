@@ -3,6 +3,11 @@
   z-index: 10;
   background-color: var(--white);
   height: 100vh;
+
+  @media (max-width: 425px) {
+    background-color: var(--blue-650);
+    height: 100%;
+  }
 }
 
 .linearGradientBg {
@@ -12,6 +17,11 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(77.95deg, #FFFFFF 36.68%, rgba(255, 255, 255, 0.5) 54.65%, rgba(255, 255, 255, 0) 72.68%);
+
+  @media (max-width: 425px) {
+    background-image: radial-gradient(circle, #7acee0, #7acee080, #7acee080, #7acee080, #7acee000);
+    // background: radial-gradient(37.31% 50% at 64.64% 50%, #7ACEE0 0%, #7acee080 49.91%, #7acee000 92.33%);
+  }
 }
 
 .videoContainer {
@@ -20,6 +30,10 @@
   height: 100vh;
 
   z-index: 0;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 
   > iframe {
     position: absolute;
@@ -47,29 +61,65 @@
 
   z-index: 2;
 
-  > div {
-    height: 2.25rem;
-    padding: 0 0.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    background-color: var(--white);
-    font-size: 1.438rem;
-    font-weight: 700;
-    color: var(--gray-300);
-
-    > span:last-of-type {
-      color: var(--white);
-      background-color: var(--blue-700);
-      padding: 0 0.3rem;
-      margin-left: 0.3rem;
-      border-radius: 3px;
-    }
+  @media (max-width: 425px) {
+    height: 100%;
+    padding: 7.25rem 7.9795%;
   }
 
   p {
     font-size: 1.5rem;
-    color: var(--gray-300)
+    color: var(--gray-300);
+
+    @media (max-width: 425px) {
+      color: var(--white);
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+  > button {
+    @media (max-width: 425px) {
+      align-self: center;
+    }
+  }
+}
+
+.typewriterContainer {
+  height: 2.25rem;
+  padding: 0 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: var(--white);
+  font-size: 1.438rem;
+  font-weight: 700;
+  color: var(--gray-300);
+  
+  @media (max-width: 425px) {
+    margin: 2rem 0;
+  }
+
+  > span:last-of-type {
+    color: var(--white);
+    background-color: var(--blue-700);
+    padding: 0 0.3rem;
+    margin-left: 0.3rem;
+    border-radius: 3px;
+  }
+}
+
+.mobileImgContainer {
+  position: relative;
+
+  > svg {
+    position: absolute;
+    left: -1rem;
+    top: -9rem;
+    z-index: -1;
+  }
+
+  @media (min-width: 426px) {
+    display: none;
   }
 }

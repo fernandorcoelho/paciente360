@@ -1,7 +1,17 @@
-.primary, .secondary {
+.primary, .secondary, .tertiary {
   display: flex;
   align-items: center;
   user-select: none;
+  flex-shrink: 0;
+  font: 0.875rem 500 'DM Sans';
+
+  @media (max-width : 425px) {
+    font-size: 0.625rem;
+    
+    > svg {
+      width: 1rem;
+    }
+  }
 
   transition: ease-in 0.3s;
 }
@@ -14,7 +24,6 @@
   border: 0;
   background-color: var(--red-500);
   color: var(--white);
-  font: 0.875rem 500 'DM Sans';
   padding: 0 1rem;
 
   &:hover {
@@ -22,7 +31,7 @@
   }
 }
 
-.secondary {
+.secondary, .tertiary {
   justify-content: space-between;
   gap: 1.75rem;
   height: 3rem;
@@ -38,11 +47,21 @@
   }
 
   &:hover {
+    border: 1px solid var(--red-500);
     background-color: var(--red-500);
     color: var(--white);
     
     > svg path {
       stroke: var(--white);
     }
+  }
+}
+
+.tertiary {
+  border: 1px solid var(--white);
+  color: var(--white);
+
+  > svg path {
+    stroke: var(--white);
   }
 }

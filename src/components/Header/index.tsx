@@ -7,9 +7,10 @@ import {
 } from '../../../public/icons/Icons';
 import { Button } from '../Button';
 import logoImg from '../../../public/images/logo.png';
+import Link from 'next/link';
+import { useWindowDimensions } from 'hooks/useWindowDimensions';
 
 import styles from './styles.module.scss';
-import Link from 'next/link';
 
 type NavItemsProps = {
   id: number;
@@ -18,6 +19,7 @@ type NavItemsProps = {
 };
 
 export function Header() {
+  const { width } = useWindowDimensions();
   const [stickyClass, setStickyClass] = useState('');
 
   useEffect(() => {
@@ -80,7 +82,7 @@ export function Header() {
           alt="Logo"
           objectFit="contain"
           // height={60}
-          width={120}
+          width={width > 425 ? 120 : 90}
         />
         {/* Lado esquerdo */}
         <div className={styles.navItems}>
@@ -94,24 +96,25 @@ export function Header() {
                 </Link>
               ))}
             </ul>
-          </nav>{' '}
+          </nav>
           {/* Itens de navegação */}
           <div>
             <button type="button" className={styles.languageBtn}>
               <BrazilFlag />
-              <span>PT-BR</span>
+              <span>PT</span>
               <ChevronDownIcon />
             </button>
 
             <Button>
-              <span>Experimente grátis</span>
+              <span>Acessar plataforma</span>
               <TrialIcon />
             </Button>
-          </div>{' '}
+          </div>
           {/* Botões de Idioma e Experimente grátis */}
-        </div>{' '}
+        </div>
         {/* Lado direito */}
       </div>
+      <div className={styles.burgerMenu}>test</div>
     </header>
   );
 }
