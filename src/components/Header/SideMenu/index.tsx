@@ -1,4 +1,6 @@
+import { Button } from 'components/Button';
 import Link from 'next/link';
+import { TrialIcon } from '../../../../public/icons/Icons';
 import styles from './styles.module.scss';
 
 type NavItemsProps = {
@@ -29,6 +31,10 @@ export const SideMenu = ({
               </li>
             </Link>
           ))}
+          <Button>
+            <span>Acessar plataforma</span>
+            <TrialIcon />
+          </Button>
         </ul>
       </nav>
     </div>
