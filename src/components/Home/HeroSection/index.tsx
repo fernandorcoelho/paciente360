@@ -1,5 +1,7 @@
 import { ArrowRightIcon } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
+import Typewriter from 'typewriter-effect';
+
 import styles from './styles.module.scss';
 
 export const HeroSection = () => {
@@ -20,8 +22,36 @@ export const HeroSection = () => {
       {/* Video tocando no BG */}
       <div className={styles.heroSection}>
         <div>
-          <span>CASOS</span>
-          <span>INTERATIVOS</span>
+          <span>
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('CASOS')
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .start();
+              }}
+            />
+          </span>
+          <span>
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('INTERATIVOS')
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .start();
+              }}
+            />
+          </span>
         </div>
 
         <p>

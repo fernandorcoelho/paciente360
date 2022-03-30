@@ -29,6 +29,10 @@
   gap: 2.375rem;
 
   nav {
+    @media (max-width: 425px) {
+      display: none;
+    }
+    
     ul {
       display: flex;
       align-items: center;
