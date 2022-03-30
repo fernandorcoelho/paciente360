@@ -125,7 +125,11 @@ export function Header() {
         </div>
       </header>
 
-      <SideMenu isMenuOpen={isMenuOpen} />
+      <SideMenu
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
+        navItems={navItemsArr}
+      />
     </>
   );
 }

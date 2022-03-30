@@ -12,4 +12,38 @@
   &.active {
     right: 0;
   }
+
+  nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+
+      li {
+        p {
+          color: var(--gray-300);
+          font: 500 1.5rem "DM Sans";
+
+          transform: translateX(100vw);
+          opacity: 0;
+
+          transition: 0.3s ease-in;
+          transition-delay: 0.3s;
+
+          &.active {
+            transform: translateX(0);
+            opacity: 100%;
+          }
+        }
+      }
+    }
+  }
 }

@@ -31,7 +31,7 @@ export const HeroSection = () => {
       <div className={styles.heroSection}>
         <div className={styles.mobileImgContainer}>
           <Image src={smilingDoctorsImg} objectFit="cover" />
-          <CircunferenceCircles size={300} />
+          <CircunferenceCircles size={340} />
         </div>
 
         <div className={styles.typewriterContainer}>
