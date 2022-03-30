@@ -1,7 +1,10 @@
 .headerContainer {
   height: 4.375rem;
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  @media (min-width: 426px) {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+  }
 
   display: flex;
 }
@@ -12,7 +15,9 @@
   left: 0;
   right: 0;
   z-index: 50;
-  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+    0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+    0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
 }
 
 .headerContent {
@@ -47,11 +52,11 @@
 
       li {
         p {
-          font: 500 0.875rem 'DM Sans';
+          font: 500 0.875rem "DM Sans";
           user-select: none;
           cursor: pointer;
 
-          transition: ease-in .3s;
+          transition: ease-in 0.3s;
 
           &:hover {
             filter: brightness(0.6);
@@ -69,7 +74,7 @@
 }
 
 .languageBtn {
-  font: 700 0.875rem 'DM Sans';
+  font: 700 0.875rem "DM Sans";
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -86,7 +91,12 @@
 }
 
 .burgerMenu {
+  position: relative;
+  width: 4.375rem;
+  height: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--blue-650);
 }

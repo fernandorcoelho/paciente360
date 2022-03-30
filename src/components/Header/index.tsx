@@ -11,6 +11,8 @@ import Link from 'next/link';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 
 import styles from './styles.module.scss';
+import { SideMenu } from './SideMenu';
+import { BurgerMenu } from './BurgerMenu';
 
 type NavItemsProps = {
   id: number;
@@ -20,6 +22,8 @@ type NavItemsProps = {
 
 export function Header() {
   const { width } = useWindowDimensions();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [stickyClass, setStickyClass] = useState('');
 
   useEffect(() => {
@@ -69,52 +73,59 @@ export function Header() {
   ];
 
   return (
-    <header
-      className={
-        stickyClass
-          ? `${styles.headerContainer} ${styles.stickyHeader}`
-          : styles.headerContainer
-      }
-    >
-      <div className={styles.headerContent}>
-        <Image
-          src={logoImg}
-          alt="Logo"
-          objectFit="contain"
-          // height={60}
-          width={width > 425 ? 120 : 90}
-        />
-        {/* Lado esquerdo */}
-        <div className={styles.navItems}>
-          <nav>
-            <ul>
-              {navItemsArr.map((item) => (
-                <Link key={item.id} href={item.link}>
-                  <li>
-                    <p>{item.text}</p>
-                  </li>
-                </Link>
-              ))}
-            </ul>
-          </nav>
-          {/* Itens de navegação */}
-          <div>
-            <button type="button" className={styles.languageBtn}>
-              <BrazilFlag />
-              <span>PT</span>
-              <ChevronDownIcon />
-            </button>
+    <>
+      <header
+        className={
+          stickyClass
+            ? `${styles.headerContainer} ${styles.stickyHeader}`
+            : styles.headerContainer
+        }
+      >
+        <div className={styles.headerContent}>
+          <Image
+            src={logoImg}
+            alt="Logo"
+            objectFit="contain"
+            // height={60}
+            width={width > 425 ? 120 : 90}
+          />
+          {/* Lado esquerdo */}
+          <div className={styles.navItems}>
+            <nav>
+              <ul>
+                {navItemsArr.map((item) => (
+                  <Link key={item.id} href={item.link}>
+                    <li>
+                      <p>{item.text}</p>
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </nav>
+            {/* Itens de navegação */}
+            <div>
+              <button type="button" className={styles.languageBtn}>
+                <BrazilFlag />
+                <span>PT</span>
+                <ChevronDownIcon />
+              </button>
 
-            <Button>
-              <span>Acessar plataforma</span>
-              <TrialIcon />
-            </Button>
+              <Button>
+                <span>Acessar plataforma</span>
+                <TrialIcon />
+              </Button>
+            </div>
+            {/* Botões de Idioma e Experimente grátis */}
           </div>
-          {/* Botões de Idioma e Experimente grátis */}
+          {/* Lado direito */}
         </div>
-        {/* Lado direito */}
-      </div>
-      <div className={styles.burgerMenu}>test</div>
-    </header>
+
+        <div className={styles.burgerMenu}>
+          <BurgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        </div>
+      </header>
+
+      <SideMenu isMenuOpen={isMenuOpen} />
+    </>
   );
 }

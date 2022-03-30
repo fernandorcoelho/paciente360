@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+
+  width: 22.5px;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 15;
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+
+    &:nth-child(2) {
+      top: 25%;
+      transform-origin: left center;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      transform-origin: left center;
+    }
+  }
+
+  &.close {
+    span {
+      background-color: var(--blue-650);
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+        transition: 0.1s;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

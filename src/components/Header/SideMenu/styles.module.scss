@@ -1,0 +1,15 @@
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  top: 0;
+  right: -100vw;
+  z-index: 11;
+
+  transition: 0.3s ease-in;
+
+  &.active {
+    right: 0;
+  }
+}
