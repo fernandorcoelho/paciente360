@@ -5,7 +5,7 @@
 
   display: flex;
   align-items: center;
-  
+
   width: 100%;
 
   margin: 0 auto;
@@ -22,16 +22,35 @@
 
   z-index: 1;
 
+  @media (max-width: 425px) {
+    width: 100%;
+    padding: 0 7.9795%;
+    align-items: center;
+  }
+
   > span {
     color: var(--white);
     font-size: 2.813rem;
     line-height: 2.5rem;
     margin-bottom: 3.438rem;
+
+    @media (max-width: 425px) {
+      font-size: 1.875rem;
+      line-height: 1.875rem;
+      max-width: 19.375rem;
+      text-align: center;
+    }
   }
 
   > p {
     color: var(--white);
     line-height: 1.5rem;
+    margin-top: 3.125rem;
+
+    @media (max-width: 425px) {
+      text-align: center;
+      margin-top: 3.5rem;
+    }
   }
 }
 
@@ -40,6 +59,11 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 1.875rem;
   row-gap: 1.875rem;
+
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   div {
     display: flex;
@@ -85,20 +109,11 @@
 
   height: 100%;
   z-index: 1;
-}
 
-.prizeContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.938rem;
-  padding: 0.625rem 1.063rem;
-  margin-top: 2.375rem;
-  margin-bottom: 2.688rem;
-  border-top: 1px solid var(--orange-500);
-  border-bottom: 1px solid var(--orange-500);
-
-  > strong {
-    color: var(--white);
+  @media (max-width: 425px) {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    opacity: 0.5;
   }
 }

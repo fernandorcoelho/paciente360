@@ -2,6 +2,10 @@
   position: relative;
   z-index: 10;
   background-color: var(--white);
+
+  @media (max-width: 425px) {
+    background-color: var(--gray-50);
+  }
 }
 
 .platformSectionContainer {

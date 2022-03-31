@@ -1,4 +1,8 @@
 .container {
+  position: fixed;
+  top: 21px;
+  right: 19px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,8 +10,6 @@
   gap: 0.35rem;
 
   width: 22.5px;
-  height: 100%;
-  position: fixed;
   cursor: pointer;
   background-color: transparent;
   border: none;

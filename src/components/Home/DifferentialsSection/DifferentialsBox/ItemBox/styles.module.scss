@@ -5,6 +5,10 @@
   justify-content: flex-start;
   gap: 0.625rem;
 
+  @media (max-width: 425px) {
+    align-items: center;
+  }
+
   > div {
     display: flex;
     flex-direction: column;
@@ -16,11 +20,19 @@
       color: var(--blue-600);
       font-size: 1.25rem;
       line-height: 1.625rem;
+
+      @media (max-width: 425px) {
+        align-self: center;
+      }
     }
 
     > p {
       color: var(--gray-600);
       line-height: 1.5rem;
+
+      @media (max-width: 425px) {
+        text-align: center;
+      }
     }
   }
 }

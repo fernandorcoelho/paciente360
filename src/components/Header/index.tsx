@@ -120,11 +120,10 @@ export function Header() {
           {/* Lado direito */}
         </div>
 
-        <div className={styles.burgerMenu}>
-          <BurgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        </div>
+        <div className={styles.burgerMenu}></div>
       </header>
 
+      <BurgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <SideMenu
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}

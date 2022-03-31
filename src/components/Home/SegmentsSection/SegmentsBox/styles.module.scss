@@ -4,4 +4,8 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 5.125rem;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 }

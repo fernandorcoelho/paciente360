@@ -44,9 +44,7 @@ export const ContinentsSection = () => {
       {/* Linear Gradient Background */}
       <div className={styles.continentsSectionContainer}>
         <span>
-          Presente em quase todos
-          <br />
-          os <strong>continentes do mundo</strong>
+          Presente em quase todos os <strong>continentes do mundo</strong>
         </span>
 
         <div className={styles.dataContainer}>
@@ -66,10 +64,14 @@ export const ContinentsSection = () => {
           <div>
             <strong>
               <span>+</span>
-              {DinamicCountUp(800)}
+              {DinamicCountUp(20000)}
             </strong>
 
-            <strong>Pessoas já utilizaram</strong>
+            <strong>
+              Pessoas
+              <br />
+              utilizam
+            </strong>
           </div>
 
           <div>
@@ -90,12 +92,6 @@ export const ContinentsSection = () => {
           </div>
         </div>
 
-        <div className={styles.prizeContainer}>
-          <TrophyIcon />
-          <strong>Prêmio no Congresso Europeu de Cardiologia em Paris</strong>
-        </div>
-        {/* Imagem do mapa mundi representando continentes */}
-
         <p>
           Democratizamos o acesso á educação em saúde, possibilitando que
           milhares de pessoas recebam informações de forma acessível e prática.
@@ -109,6 +105,7 @@ export const ContinentsSection = () => {
           objectFit="cover"
         />
       </div>
+      {/* Imagem do mapa mundi representando continentes */}
       {/* Lado direito */}
     </section>
   );

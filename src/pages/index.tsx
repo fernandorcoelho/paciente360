@@ -23,20 +23,20 @@ export default function Home() {
         <title>Home | Paciente 360º</title>
       </Head>
 
-      {/* <div className={styles.imageContainer}>
+      <div className={styles.imageContainer}>
         <Image
           src={deniseImg}
           objectFit="cover"
           alt="Foto de Denise com diagnóstico"
         />
-      </div> */}
+      </div>
 
       <HeroSection />
       <PlatformSection />
-      {/* <SegmentsSection /> */}
+      <SegmentsSection />
       {/* <TryoutSection /> */}
-      {/* <ContinentsSection /> */}
-      {/* <DifferentialsSection /> */}
+      <ContinentsSection />
+      <DifferentialsSection />
       {/* <ContactSpecialistSection /> */}
     </>
   );
