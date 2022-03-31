@@ -1,13 +1,15 @@
-.primary, .secondary, .tertiary {
+.primary,
+.secondary,
+.tertiary {
   display: flex;
   align-items: center;
   user-select: none;
   flex-shrink: 0;
-  font: 0.875rem 500 'DM Sans';
+  font: 0.875rem 500 "DM Sans";
 
-  @media (max-width : 425px) {
-    font-size: 0.625rem;
-    
+  @media (max-width: 425px) {
+    font-size: 1rem;
+
     > svg {
       width: 1rem;
     }
@@ -31,14 +33,15 @@
   }
 }
 
-.secondary, .tertiary {
+.secondary,
+.tertiary {
   justify-content: space-between;
   gap: 1.75rem;
   height: 3rem;
   border-radius: 6px;
   border: 1px solid var(--red-500);
   background-color: transparent;
-  color: var(--gray-200);
+  color: var(--gray-500);
   font-weight: 700;
   padding: 0 2.813rem;
 
@@ -50,7 +53,7 @@
     border: 1px solid var(--red-500);
     background-color: var(--red-500);
     color: var(--white);
-    
+
     > svg path {
       stroke: var(--white);
     }

@@ -32,12 +32,12 @@ export default function Home() {
       </div> */}
 
       <HeroSection />
-      {/* <PlatformSection />
-      <SegmentsSection />
-      <TryoutSection />
-      <ContinentsSection />
-      <DifferentialsSection />
-      <ContactSpecialistSection /> */}
+      <PlatformSection />
+      {/* <SegmentsSection /> */}
+      {/* <TryoutSection /> */}
+      {/* <ContinentsSection /> */}
+      {/* <DifferentialsSection /> */}
+      {/* <ContactSpecialistSection /> */}
     </>
   );
 }
