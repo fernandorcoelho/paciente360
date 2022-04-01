@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     margin: 0;
   }
 }
@@ -41,7 +41,7 @@
   gap: 2.375rem;
 
   nav {
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       display: none;
     }
 
@@ -72,7 +72,7 @@
     gap: 1.5rem;
 
     > button:last-of-type {
-      @media (max-width: 425px) {
+      @media (max-width: 768px) {
         display: none;
       }
     }

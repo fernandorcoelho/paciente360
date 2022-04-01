@@ -32,7 +32,7 @@
     grid-area: d;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     display: grid;
     row-gap: 4.813rem;
     column-gap: 4.375rem;
@@ -50,7 +50,7 @@
     justify-content: flex-start;
     gap: 1.5rem;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       width: 100%;
 
       > span {
@@ -98,7 +98,7 @@
   padding: 1.5rem 0;
   margin-top: 1.5rem;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 3rem;
     padding: 3rem 0;
@@ -129,7 +129,7 @@
   background-color: transparent;
   user-select: none;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     align-self: center;
     margin-top: 5.125rem;
   }

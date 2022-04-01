@@ -17,13 +17,13 @@ export const DifferentialsSection = () => {
       className={styles.differentialsSectionWrapper}
       id="fique-por-dentro"
     >
-      {width !== 0 && width <= 425 && (
+      {width !== 0 && width <= 768 && (
         <div className={styles.mobileDifferentialsBoxContainer}>
           <DifferentialsBox />
         </div>
       )}
 
-      {width > 425 && (
+      {width > 768 && (
         <div className={styles.differentialsSectionContainer}>
           <span>
             <strong>Diferenciais</strong> da
@@ -47,12 +47,12 @@ export const DifferentialsSection = () => {
           className={styles.img}
         />
         <div className={styles.svgs}>
-          {width > 425 ? <CircunferenceCircles2 /> : <CircunferenceCircles3 />}
+          {width > 768 ? <CircunferenceCircles2 /> : <CircunferenceCircles3 />}
         </div>
       </div>
       {/* Lado direito que contém imagens */}
 
-      {width !== 0 && width <= 425 && (
+      {width !== 0 && width <= 768 && (
         <div className={styles.differentialsSectionContainer}>
           <span>
             <strong>Diferenciais</strong> da nossa plataforma

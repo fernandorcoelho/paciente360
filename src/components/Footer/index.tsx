@@ -166,7 +166,7 @@ export const Footer = () => {
 
       <div className={styles.bottomContainer}>
         <p>Paciente 360 • 2022 Todos os direitos reservados</p>
-        {width > 425 && (
+        {width > 768 && (
           <Link href="#hero">
             <button type="button" className={styles.btn}>
               <CircleArrowUpIcon />
@@ -176,7 +176,7 @@ export const Footer = () => {
         )}
         <div>
           <AbedIcon />
-          {width > 425 && (
+          {width > 768 && (
             <div>
               <p>Desenvolvido por:</p>
               <FastersIcon />

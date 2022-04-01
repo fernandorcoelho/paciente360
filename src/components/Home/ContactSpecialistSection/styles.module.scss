@@ -8,7 +8,7 @@
 
   background-image: linear-gradient(to bottom, #f7f7f7, #f6f6f6, #f6f6f6, #f5f5f5, #f4f4f4);
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     background-color: var(--white);
     background-image: none;
@@ -26,7 +26,7 @@
 
   padding: 6.25rem 0 9.375rem;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column-reverse;
     width: 100%;
     padding: 0 7.9795%;
@@ -44,7 +44,7 @@
       line-height: 2.625rem;
       color: var(--gray-600);
 
-      @media (max-width: 425px) {
+      @media (max-width: 768px) {
         font-size: 1.875rem;
         line-height: 1.875rem;
       }
@@ -62,7 +62,7 @@
 
     max-width: 16.25rem;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       font-size: 1.25rem;
       line-height: 1.75rem;
       text-align: center;
@@ -83,12 +83,12 @@
   .gif {
     top: -10rem !important;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       top: 0 !important;
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     position: relative;
     width: 100%;
     display: flex;
@@ -110,7 +110,7 @@
     bottom: -2.5rem;
     z-index: 0;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       top: calc(50% - 2.5rem);
       transform: translateY(-50%);
     }
@@ -125,7 +125,7 @@
 
   z-index: 15;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     position: relative;
     top: 0;
     left: 0;

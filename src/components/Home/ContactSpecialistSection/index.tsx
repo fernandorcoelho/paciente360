@@ -14,7 +14,7 @@ export const ContactSpecialistSection = () => {
 
   return (
     <section className={styles.contactSpecialistWrapper} id="contato">
-      {width !== 0 && width <= 425 && (
+      {width !== 0 && width <= 768 && (
         <div className={styles.contactSpecialistContainer}>
           <div>
             <span>
@@ -33,18 +33,18 @@ export const ContactSpecialistSection = () => {
             alt="Macbook"
             objectFit="contain"
             layout="intrinsic"
-            width={width > 425 ? 620 : 350}
-            height={width > 425 ? 620 : 350}
+            width={width > 768 ? 620 : 350}
+            height={width > 768 ? 620 : 350}
             className={styles.gif}
           />
         </div>
-        <CircunferenceCircles3 size={width > 425 ? 500 : 260} />
+        <CircunferenceCircles3 size={width > 768 ? 500 : 260} />
       </div>
       {/* Lado esquerdo contendo o gif */}
 
       <div className={styles.contactSpecialistContainer}>
         <div>
-          {width > 425 && (
+          {width > 768 && (
             <span>
               Fale com um
               <br />

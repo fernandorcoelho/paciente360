@@ -87,7 +87,7 @@ export function Header() {
             alt="Logo"
             objectFit="contain"
             // height={60}
-            width={width > 425 ? 120 : 90}
+            width={width > 768 ? 120 : 90}
           />
           {/* Lado esquerdo */}
           <div className={styles.navItems}>

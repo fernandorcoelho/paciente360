@@ -4,7 +4,7 @@
   background-color: var(--white);
   height: 100vh;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     background-color: var(--blue-650);
     height: 100%;
   }
@@ -18,7 +18,7 @@
   height: 100%;
   background: linear-gradient(77.95deg, #ffffff 36.68%, rgba(255, 255, 255, 0.5) 54.65%, rgba(255, 255, 255, 0) 72.68%);
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     background-image: radial-gradient(circle, #7acee0, #7acee080, #7acee080, #7acee080, #7acee000);
     // background: radial-gradient(37.31% 50% at 64.67.9795% 50%, #7ACEE0 0%, #7acee080 49.91%, #7acee000 92.33%);
   }
@@ -31,7 +31,7 @@
 
   z-index: 0;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     display: none;
   }
 
@@ -61,7 +61,7 @@
 
   z-index: 2;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     height: 100%;
     padding: 7.25rem 7.9795%;
   }
@@ -70,7 +70,7 @@
     font-size: 1.5rem;
     color: var(--gray-600);
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       color: var(--white);
       text-align: center;
       align-self: center;
@@ -78,7 +78,7 @@
   }
 
   > button {
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       align-self: center;
     }
   }
@@ -96,7 +96,7 @@
   font-weight: 700;
   color: var(--gray-600);
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     margin: 2rem 0;
   }
 

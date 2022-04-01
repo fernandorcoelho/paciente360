@@ -15,7 +15,7 @@ export const TryoutSection = () => {
   // Início: Animação de opacidade ao carregar a página
   const appVariants = {
     visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-    hidden: { opacity: 0, x: width > 425 ? 200 : -200 }
+    hidden: { opacity: 0, x: width > 768 ? 200 : -200 }
   };
 
   function TryoutCTA() {

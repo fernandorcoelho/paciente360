@@ -85,7 +85,7 @@ export const HeroSection = () => {
           de casos clínicos <br /> com <strong>pessoas reais no mundo</strong>.
         </p>
 
-        <Button variant={width > 425 ? 'secondary' : 'tertiary'}>
+        <Button variant={width > 768 ? 'secondary' : 'tertiary'}>
           <span>Avalie gratuitamente</span>
           <ArrowRightIcon />
         </Button>

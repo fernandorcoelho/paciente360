@@ -3,7 +3,7 @@
   z-index: 10;
   background-color: var(--white);
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     background-color: var(--gray-50);
   }
 }
@@ -19,7 +19,7 @@
   margin: 0 auto;
   padding: 7.563rem 7.9795%;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     padding: 8.25rem 7.9795%;
   }
 }
@@ -32,7 +32,7 @@
   height: 100%;
   background: linear-gradient(77.95deg, #f4f4f4 36.68%, rgba(244, 244, 244, 0.5) 54.65%, rgba(244, 244, 244, 0) 72.68%);
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -48,7 +48,7 @@
 
   z-index: 2;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     align-items: center;
     gap: 4.063rem;
   }
@@ -58,7 +58,7 @@
     line-height: 2.5rem;
     color: var(--gray-600);
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       font-size: 1.875rem;
       line-height: 1.875rem;
       text-align: center;
@@ -74,7 +74,7 @@
     line-height: 1.75rem;
     max-width: 40rem;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       font-size: 1.25rem;
       line-height: 1.75rem;
       text-align: center;
@@ -85,7 +85,7 @@
 .imageContainer {
   width: 45rem;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
