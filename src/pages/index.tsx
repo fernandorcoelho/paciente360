@@ -15,8 +15,6 @@ import { useWindowDimensions } from 'hooks/useWindowDimensions';
 export default function Home() {
   const { width } = useWindowDimensions();
 
-  console.log(width);
-
   return (
     <>
       <Head>

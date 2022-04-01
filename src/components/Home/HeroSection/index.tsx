@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   ArrowRightIcon,
   CircunferenceCircles
@@ -12,6 +13,19 @@ import styles from './styles.module.scss';
 
 export const HeroSection = () => {
   const { width } = useWindowDimensions();
+  const [textElContent, setTextElContent] = useState('');
+
+  const handleTypewriter = (i: number) => {
+    console.log(i);
+
+    if (i === 1) {
+      setTextElContent('INTERATIVOS');
+    } else if (i === 2) {
+      setTextElContent('REAIS');
+    } else if (i === 3) {
+      setTextElContent('HUMANIZADOS');
+    }
+  };
 
   return (
     <main className={styles.heroSectionContainer} id="hero">
@@ -43,28 +57,25 @@ export const HeroSection = () => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString('CASOS')
+                  .callFunction(() => handleTypewriter(1))
+                  .typeString('CASOS CLÍNICOS')
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .start()
+                  .callFunction(() => handleTypewriter(2))
+                  .typeString('COMPORTAMENTOS')
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .start()
+                  .callFunction(() => handleTypewriter(3))
+                  .typeString('PACIENTES')
                   .pauseFor(2500)
                   .deleteAll()
                   .start();
               }}
             />
           </span>
-          <span>
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true
-              }}
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString('INTERATIVOS')
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .start();
-              }}
-            />
-          </span>
+          <span>{textElContent}</span>
         </div>
 
         <p>
