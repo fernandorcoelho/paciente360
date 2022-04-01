@@ -16,8 +16,6 @@ export const HeroSection = () => {
   const [textElContent, setTextElContent] = useState('');
 
   const handleTypewriter = (i: number) => {
-    console.log(i);
-
     if (i === 1) {
       setTextElContent('INTERATIVOS');
     } else if (i === 2) {

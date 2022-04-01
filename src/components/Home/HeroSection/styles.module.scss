@@ -20,7 +20,7 @@
 
   @media (max-width: 425px) {
     background-image: radial-gradient(circle, #7acee0, #7acee080, #7acee080, #7acee080, #7acee000);
-    // background: radial-gradient(37.31% 50% at 64.64% 50%, #7ACEE0 0%, #7acee080 49.91%, #7acee000 92.33%);
+    // background: radial-gradient(37.31% 50% at 64.67.9795% 50%, #7ACEE0 0%, #7acee080 49.91%, #7acee000 92.33%);
   }
 }
 
@@ -51,7 +51,7 @@
   width: 100%;
   height: calc(100vh - 8.5rem);
   margin: 0 auto;
-  padding: 3rem 4%;
+  padding: 3rem 7.9795%;
 
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@
 
   @media (max-width: 425px) {
     height: 100%;
-    padding: 7.25rem 4%;
+    padding: 7.25rem 7.9795%;
   }
 
   p {
