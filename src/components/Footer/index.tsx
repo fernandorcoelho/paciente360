@@ -1,3 +1,4 @@
+import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
@@ -24,6 +25,8 @@ interface SocialMediaArr extends NavProps {
 }
 
 export const Footer = () => {
+  const { width } = useWindowDimensions();
+
   const socialMediaArr: SocialMediaArr[] = [
     {
       id: 0,
@@ -99,7 +102,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.topContainer}>
-        <div>
+        <div className={styles.a}>
           <Image src={whiteLogoImg} alt="Logo branca" />
           <p>
             O Paciente 360® é uma tecnologia 100% brasileira que inovou a
@@ -110,7 +113,7 @@ export const Footer = () => {
         </div>
         {/* Logo + Descrição do projeto */}
 
-        <nav>
+        <nav className={styles.b}>
           <strong>Siga nossas redes sociais</strong>
           <ul>
             {socialMediaArr.map((item) => (
@@ -125,7 +128,7 @@ export const Footer = () => {
         </nav>
         {/* Social Media */}
 
-        <nav>
+        <nav className={styles.c}>
           <strong>Privacidade & Termos</strong>
           <ul>
             {termsAndPolicyArr.map((item) => (
@@ -139,7 +142,7 @@ export const Footer = () => {
         </nav>
         {/* Termos & Políticas */}
 
-        <nav>
+        <nav className={styles.d}>
           <strong>Navegue</strong>
           <ul>
             {navigationArr.map((item) => (
@@ -153,22 +156,32 @@ export const Footer = () => {
         </nav>
         {/* Navegação */}
       </div>
+      <Link href="#hero">
+        <button type="button" className={styles.btn}>
+          <CircleArrowUpIcon />
+          <p>Voltar ao topo</p>
+        </button>
+      </Link>
       {/* Parte de cima do footer */}
 
       <div className={styles.bottomContainer}>
         <p>Paciente 360 • 2022 Todos os direitos reservados</p>
-        <Link href="#hero">
-          <button type="button">
-            <CircleArrowUpIcon />
-            <p>Voltar ao topo</p>
-          </button>
-        </Link>
+        {width > 425 && (
+          <Link href="#hero">
+            <button type="button" className={styles.btn}>
+              <CircleArrowUpIcon />
+              <p>Voltar ao topo</p>
+            </button>
+          </Link>
+        )}
         <div>
           <AbedIcon />
-          <div>
-            <p>Desenvolvido por:</p>
-            <FastersIcon />
-          </div>
+          {width > 425 && (
+            <div>
+              <p>Desenvolvido por:</p>
+              <FastersIcon />
+            </div>
+          )}
         </div>
       </div>
       {/* Parte de baixo do footer */}
