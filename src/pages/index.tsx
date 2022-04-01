@@ -37,7 +37,7 @@ export default function Home() {
       {/* <TryoutSection /> */}
       <ContinentsSection />
       <DifferentialsSection />
-      {/* <ContactSpecialistSection /> */}
+      <ContactSpecialistSection />
     </>
   );
 }

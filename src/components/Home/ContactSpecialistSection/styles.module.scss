@@ -1,14 +1,23 @@
 .contactSpecialistWrapper {
   position: relative;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
   gap: 2.688rem;
 
   background-image: linear-gradient(to bottom, #f7f7f7, #f6f6f6, #f6f6f6, #f5f5f5, #f4f4f4);
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    background-color: var(--white);
+    background-image: none;
+    padding: 7.5rem 0;
+  }
 }
 
 .contactSpecialistContainer {
+  position: relative;
   width: 60%;
   display: flex;
   align-items: center;
@@ -16,6 +25,12 @@
   gap: 4.063rem;
 
   padding: 6.25rem 0 9.375rem;
+
+  @media (max-width: 425px) {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0 7.9795%;
+  }
 
   > div {
     display: flex;
@@ -29,6 +44,11 @@
       line-height: 2.625rem;
       color: var(--gray-600);
 
+      @media (max-width: 425px) {
+        font-size: 1.875rem;
+        line-height: 1.875rem;
+      }
+
       > strong {
         color: var(--blue-600);
       }
@@ -40,6 +60,14 @@
     line-height: 1.75rem;
     color: var(--gray-600);
 
+    max-width: 16.25rem;
+
+    @media (max-width: 425px) {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      text-align: center;
+    }
+
     > strong {
       color: var(--blue-600);
     }
@@ -47,11 +75,26 @@
 }
 
 .gifContainer {
-  position: relative;
   width: 40%;
   height: 100%;
 
-  z-index: 0;
+  z-index: 11;
+
+  .gif {
+    top: -10rem !important;
+
+    @media (max-width: 425px) {
+      top: 0 !important;
+    }
+  }
+
+  @media (max-width: 425px) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   // > iframe {
   //   position: absolute;
@@ -61,14 +104,34 @@
   //   transform: translate(-50%, -50%);
   //   pointer-events: none;
   // }
+
   > svg {
-    width: 100%;
+    position: absolute;
+    bottom: -2.5rem;
+    z-index: 0;
+
+    @media (max-width: 425px) {
+      top: calc(50% - 2.5rem);
+      transform: translateY(-50%);
+    }
   }
 }
 
 .imgContainer {
   position: absolute;
-  bottom: 2.75rem;
-  left: -5rem;
+  top: -2rem;
+  left: -7rem;
   width: 100%;
+
+  z-index: 15;
+
+  @media (max-width: 425px) {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
