@@ -32,7 +32,7 @@ export default function Home() {
       <HeroSection />
       <PlatformSection />
       <SegmentsSection />
-      {/* <TryoutSection /> */}
+      <TryoutSection />
       <ContinentsSection />
       <DifferentialsSection />
       <ContactSpecialistSection />

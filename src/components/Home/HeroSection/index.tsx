@@ -75,7 +75,8 @@ export const HeroSection = () => {
               }}
             />
           </span>
-          <span>{textElContent}</span>
+          {/* Typewriter */}
+          <span>{textElContent}</span> {/* Texto à direita dinâmico */}
         </div>
 
         <p>

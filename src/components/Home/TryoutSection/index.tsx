@@ -5,14 +5,17 @@ import Image from 'next/image';
 import { ArrowRightIcon } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
 import whiteLogoImg from '../../../../public/images/white-logo.png';
+import { useWindowDimensions } from 'hooks/useWindowDimensions';
 
 import styles from './styles.module.scss';
 
 export const TryoutSection = () => {
+  const { width } = useWindowDimensions();
+
   // Início: Animação de opacidade ao carregar a página
   const appVariants = {
     visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-    hidden: { opacity: 0, x: 200 }
+    hidden: { opacity: 0, x: width > 425 ? 200 : -200 }
   };
 
   function TryoutCTA() {
@@ -50,7 +53,13 @@ export const TryoutSection = () => {
   return (
     <section className={styles.tryoutSectionContainer} id="para-quem">
       <div className={styles.imgContainer}>
-        <Image src={whiteLogoImg} alt="Logo branca" objectFit="cover" />
+        <Image
+          src={whiteLogoImg}
+          alt="Logo branca"
+          objectFit="contain"
+          layout="intrinsic"
+          width={150}
+        />
       </div>
 
       <TryoutCTA />
