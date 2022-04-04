@@ -16,6 +16,10 @@
   outline: none;
   z-index: 55;
 
+  @media (min-width: 769px) {
+    display: none;
+  }
+
   span {
     display: block;
     height: 3px;
