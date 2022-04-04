@@ -1,10 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import {
-  BrazilFlag,
-  ChevronDownIcon,
-  TrialIcon
-} from '../../../public/icons/Icons';
+import { TrialIcon } from '../../../public/icons/Icons';
 import { Button } from '../Button';
 import logoImg from '../../../public/images/logo.png';
 import Link from 'next/link';
@@ -13,6 +9,7 @@ import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import styles from './styles.module.scss';
 import { SideMenu } from './SideMenu';
 import { BurgerMenu } from './BurgerMenu';
+import { LanguagesButton } from './LanguagesButton';
 
 type NavItemsProps = {
   id: number;
@@ -104,11 +101,7 @@ export function Header() {
             </nav>
             {/* Itens de navegação */}
             <div>
-              <button type="button" className={styles.languageBtn}>
-                <BrazilFlag />
-                <span>PT</span>
-                <ChevronDownIcon />
-              </button>
+              <LanguagesButton />
 
               <Button>
                 <span>Acessar plataforma</span>
