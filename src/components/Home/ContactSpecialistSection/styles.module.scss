@@ -13,6 +13,7 @@
     background-color: var(--white);
     background-image: none;
     padding: 7.5rem 0;
+    gap: 0;
   }
 }
 
@@ -29,7 +30,7 @@
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     width: 100%;
-    padding: 0 10%;
+    padding: 0 7.9795%;
   }
 
   > div {
@@ -47,6 +48,7 @@
       @media (max-width: 768px) {
         font-size: 1.875rem;
         line-height: 1.875rem;
+        margin-bottom: 1.563rem;
       }
 
       > strong {
