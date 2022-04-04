@@ -7,8 +7,11 @@ import smilingDoctorsImg from '../../../../public/images/smiling_doctors.png';
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 export const PlatformSection = () => {
+  const { t } = useTranslation();
+
   // Início: Animação de translate da imagem dos médicos
   const imgVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
@@ -50,20 +53,13 @@ export const PlatformSection = () => {
       <div className={styles.platformSectionContainer}>
         <div className={styles.platformSection}>
           <strong>
-            Tecnologia inovadora
-            <br />
-            para transformar o<br />
-            <span>ensino em saúde</span>
+            {t('platformHead1')} <span>{t('platformHead2')}</span>
           </strong>
 
-          <p>
-            Utilizamos o ambiente digital para oferecer uma ferramenta que
-            amplia o acesso à educação em saúde, de forma prática, interativa e
-            de forma humanizada, com interações da experiência real.
-          </p>
+          <p>{t('platformText')}</p>
 
           <Button variant="secondary">
-            <span>Faça um teste agora mesmo</span>
+            <span>{t('tryoutNow')}</span>
             <ArrowRightIcon />
           </Button>
         </div>{' '}

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ArrowRightIcon } from '../../../../../../public/icons/Icons';
 import { Button } from '../../../../Button';
 
@@ -13,6 +14,8 @@ type ItemBoxProps = {
 };
 
 export const ItemBox = ({ icon, title, description, link }: ItemBoxProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.itemBoxContainer}>
       <div>
@@ -23,7 +26,7 @@ export const ItemBox = ({ icon, title, description, link }: ItemBoxProps) => {
 
       <Link href={link}>
         <Button variant="secondary">
-          <span>Saiba mais</span>
+          <span>{t('knowMore')}</span>
           <ArrowRightIcon />
         </Button>
       </Link>

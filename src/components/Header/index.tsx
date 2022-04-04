@@ -5,11 +5,12 @@ import { Button } from '../Button';
 import logoImg from '../../../public/images/logo.png';
 import Link from 'next/link';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
-
-import styles from './styles.module.scss';
 import { SideMenu } from './SideMenu';
 import { BurgerMenu } from './BurgerMenu';
 import { LanguagesButton } from './LanguagesButton';
+import { useTranslation } from 'react-i18next';
+
+import styles from './styles.module.scss';
 
 type NavItemsProps = {
   id: number;
@@ -18,6 +19,7 @@ type NavItemsProps = {
 };
 
 export function Header() {
+  const { t } = useTranslation();
   const { width } = useWindowDimensions();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,32 +41,32 @@ export function Header() {
   const navItemsArr: NavItemsProps[] = [
     {
       id: 0,
-      text: 'Soluções',
+      text: t('solutions'),
       link: '#solucoes'
     },
     {
       id: 1,
-      text: 'A plataforma',
+      text: t('thePlatform'),
       link: '#plataforma'
     },
     {
       id: 2,
-      text: 'Para quem',
+      text: t('forWhom'),
       link: '#para-quem'
     },
     {
       id: 3,
-      text: 'Casos',
+      text: t('cases'),
       link: '#casos'
     },
     {
       id: 4,
-      text: 'Fique por dentro',
+      text: t('stayIn'),
       link: '#fique-por-dentro'
     },
     {
       id: 5,
-      text: 'Contato',
+      text: t('contact'),
       link: '#contato'
     }
   ];
@@ -104,7 +106,7 @@ export function Header() {
               <LanguagesButton />
 
               <Button>
-                <span>Acessar plataforma</span>
+                <span>{t('accessPlatform')}</span>
                 <TrialIcon />
               </Button>
             </div>

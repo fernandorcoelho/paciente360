@@ -6,10 +6,12 @@ import { ArrowRightIcon } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
 import whiteLogoImg from '../../../../public/images/white-logo.png';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
 export const TryoutSection = () => {
+  const { t } = useTranslation();
   const { width } = useWindowDimensions();
 
   // Início: Animação de opacidade ao carregar a página
@@ -37,12 +39,12 @@ export const TryoutSection = () => {
         className={styles.tryoutSection}
       >
         <span>
-          Projetamos <strong>simulações de cenários clínicos</strong>, afim de
-          permitir a interação, em um ambiente seguro e realista.
+          {t('tryoutHead1')} <strong>{t('tryoutHead2')}</strong>{' '}
+          {t('tryoutHead3')}
         </span>
 
         <Button variant="secondary">
-          <span>Avalie gratuitamente</span>
+          <span>{t('tryoutForFree')}</span>
           <ArrowRightIcon />
         </Button>
       </motion.div>

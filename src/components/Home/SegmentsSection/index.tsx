@@ -1,18 +1,18 @@
+import { useTranslation } from 'react-i18next';
 import { SegmentsBox } from './SegmentsBox';
+
 import styles from './styles.module.scss';
 
 export const SegmentsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.segmentsSectionContainer} id="plataforma">
       <div className={styles.segmentsSection}>
         <span>
-          Somos a maior
-          <br />
-          biblioteca de casos
-          <br />
-          <strong>clínicos do mundo</strong>
+          {t('casesHead1')} <strong>{t('casesHead2')}</strong>
         </span>
-        <p>Atuamos em diversos segmentos.</p>
+        <p>{t('casesText')}.</p>
         <SegmentsBox /> {/* Componentes dos segmentos */}
       </div>
     </section>

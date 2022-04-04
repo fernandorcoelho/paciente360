@@ -27,6 +27,8 @@
 
   padding: 6.25rem 0 9.375rem;
 
+  z-index: 16;
+
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     width: 100%;
@@ -44,6 +46,7 @@
       font-size: 2.813rem;
       line-height: 2.625rem;
       color: var(--gray-600);
+      max-width: 16.563rem;
 
       @media (max-width: 768px) {
         font-size: 1.875rem;

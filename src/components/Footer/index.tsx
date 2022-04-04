@@ -2,6 +2,7 @@ import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   AbedIcon,
   CircleArrowUpIcon,
@@ -25,6 +26,7 @@ interface SocialMediaArr extends NavProps {
 }
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const { width } = useWindowDimensions();
 
   const socialMediaArr: SocialMediaArr[] = [
@@ -51,17 +53,17 @@ export const Footer = () => {
   const termsAndPolicyArr: NavProps[] = [
     {
       id: 0,
-      text: 'Termos de uso',
+      text: t('terms'),
       link: '#'
     },
     {
       id: 1,
-      text: 'Políticas de privacidade',
+      text: t('privacyPolicies'),
       link: '#'
     },
     {
       id: 2,
-      text: 'Política de reembolso',
+      text: t('refundPolicy'),
       link: '#'
     }
   ];
@@ -74,27 +76,27 @@ export const Footer = () => {
     },
     {
       id: 1,
-      text: 'Soluções',
+      text: t('solutions'),
       link: '#solucoes'
     },
     {
       id: 2,
-      text: 'A Plataforma',
+      text: t('thePlatform'),
       link: '#plataforma'
     },
     {
       id: 3,
-      text: 'Para quem',
+      text: t('forWhom'),
       link: '#para-quem'
     },
     {
       id: 4,
-      text: 'Casos',
+      text: t('cases'),
       link: '#casos'
     },
     {
       id: 5,
-      text: 'Fique por dentro',
+      text: t('stayIn'),
       link: '#fique-por-dentro'
     }
   ];
@@ -104,17 +106,12 @@ export const Footer = () => {
       <div className={styles.topContainer}>
         <div className={styles.a}>
           <Image src={whiteLogoImg} alt="Logo branca" />
-          <p>
-            O Paciente 360® é uma tecnologia 100% brasileira que inovou a
-            educação ao propor a simulação de casos clínicos virtuais
-            humanizados para ensinar conceitos e orientar decisões que fazem
-            parte da rotina de médicos e outros profissionais da área da saúde.
-          </p>
+          <p>{t('footerText')}</p>
         </div>
         {/* Logo + Descrição do projeto */}
 
         <nav className={styles.b}>
-          <strong>Siga nossas redes sociais</strong>
+          <strong>{t('followUs')}</strong>
           <ul>
             {socialMediaArr.map((item) => (
               <Link key={item.id} href={item.link}>
@@ -129,7 +126,7 @@ export const Footer = () => {
         {/* Social Media */}
 
         <nav className={styles.c}>
-          <strong>Privacidade & Termos</strong>
+          <strong>{t('privacyTerms')}</strong>
           <ul>
             {termsAndPolicyArr.map((item) => (
               <Link key={item.id} href={item.link}>
@@ -143,7 +140,7 @@ export const Footer = () => {
         {/* Termos & Políticas */}
 
         <nav className={styles.d}>
-          <strong>Navegue</strong>
+          <strong>{t('browse')}</strong>
           <ul>
             {navigationArr.map((item) => (
               <Link key={item.id} href={item.link}>
@@ -156,12 +153,14 @@ export const Footer = () => {
         </nav>
         {/* Navegação */}
       </div>
-      <Link href="#hero">
-        <button type="button" className={styles.btn}>
-          <CircleArrowUpIcon />
-          <p>Voltar ao topo</p>
-        </button>
-      </Link>
+      {width !== 0 && width <= 768 && (
+        <Link href="#hero">
+          <button type="button" className={styles.btn}>
+            <CircleArrowUpIcon />
+            <p>{t('backToTop')}</p>
+          </button>
+        </Link>
+      )}
       {/* Parte de cima do footer */}
 
       <div className={styles.bottomContainer}>
@@ -170,7 +169,7 @@ export const Footer = () => {
           <Link href="#hero">
             <button type="button" className={styles.btn}>
               <CircleArrowUpIcon />
-              <p>Voltar ao topo</p>
+              <p>{t('backToTop')}</p>
             </button>
           </Link>
         )}
@@ -178,7 +177,7 @@ export const Footer = () => {
           <AbedIcon />
           {width > 768 && (
             <div>
-              <p>Desenvolvido por:</p>
+              <p>{t('developedBy')}</p>
               <FastersIcon />
             </div>
           )}

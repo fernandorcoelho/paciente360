@@ -1,6 +1,8 @@
 import { Button } from 'components/Button';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { TrialIcon } from '../../../../public/icons/Icons';
+
 import styles from './styles.module.scss';
 
 type NavItemsProps = {
@@ -20,6 +22,8 @@ export const SideMenu = ({
   setIsMenuOpen,
   navItems
 }: SideMenuProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className={`${styles.container} ${isMenuOpen && styles.active}`}>
       <nav>
@@ -32,7 +36,7 @@ export const SideMenu = ({
             </Link>
           ))}
           <Button>
-            <span>Acessar plataforma</span>
+            <span>{t('accessPlatform')}</span>
             <TrialIcon />
           </Button>
         </ul>

@@ -8,20 +8,29 @@ import Typewriter from 'typewriter-effect';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import Image from 'next/image';
 import smilingDoctorsImg from '../../../../public/images/smiling_doctors.png';
+import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
 
 export const HeroSection = () => {
+  const { t, i18n } = useTranslation();
   const { width } = useWindowDimensions();
+
+  const firstTextElArr = [
+    t('casosClinicos'),
+    t('comportamentos'),
+    t('pacientes')
+  ];
+
   const [textElContent, setTextElContent] = useState('');
 
   const handleTypewriter = (i: number) => {
     if (i === 1) {
-      setTextElContent('INTERATIVOS');
+      setTextElContent(t('interativos'));
     } else if (i === 2) {
-      setTextElContent('REAIS');
+      setTextElContent(t('reais'));
     } else if (i === 3) {
-      setTextElContent('HUMANIZADOS');
+      setTextElContent(t('humanizados'));
     }
   };
 
@@ -56,17 +65,17 @@ export const HeroSection = () => {
               onInit={(typewriter) => {
                 typewriter
                   .callFunction(() => handleTypewriter(1))
-                  .typeString('CASOS CLÍNICOS')
+                  .typeString(firstTextElArr[0])
                   .pauseFor(2500)
                   .deleteAll()
                   .start()
                   .callFunction(() => handleTypewriter(2))
-                  .typeString('COMPORTAMENTOS')
+                  .typeString(firstTextElArr[1])
                   .pauseFor(2500)
                   .deleteAll()
                   .start()
                   .callFunction(() => handleTypewriter(3))
-                  .typeString('PACIENTES')
+                  .typeString(firstTextElArr[2])
                   .pauseFor(2500)
                   .deleteAll()
                   .start();
@@ -78,15 +87,12 @@ export const HeroSection = () => {
         </div>
 
         <p>
-          A{' '}
-          <strong>
-            única plataforma de <br /> simulação{' '}
-          </strong>
-          de casos clínicos <br /> com <strong>pessoas reais no mundo</strong>.
+          {t('heroText1')} <strong>{t('heroText2')}</strong> {t('heroText3')}{' '}
+          <strong>{t('heroText4')}</strong>.
         </p>
 
         <Button variant={width > 768 ? 'secondary' : 'tertiary'}>
-          <span>Avalie gratuitamente</span>
+          <span>{t('tryoutForFree')}</span>
           <ArrowRightIcon />
         </Button>
       </div>

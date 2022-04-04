@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   BoltIcon,
   GlobeIcon,
@@ -18,39 +19,38 @@ type ItemBoxProps = {
 };
 
 export const DifferentialsBox = () => {
+  const { t } = useTranslation();
+
   const itemBoxArr: ItemBoxProps[] = [
     {
       icon: <UserHeartIcon />,
-      title: 'Humanização',
-      description:
-        'Traz em todas as versões e etapas interações humanizadas entre profisisonais de saúde e pacientes.'
+      title: t('humanization'),
+      description: t('humanizationText')
     },
     {
       icon: <JoystickIcon />,
-      title: 'Gameficação',
-      description:
-        '100% adaptado trazendo o mesmo conceito de games com interações completas.'
+      title: t('gamefication'),
+      description: t('gameficationText')
     },
     {
       icon: <BoltIcon />,
-      title: 'Feedback em tempo real',
-      description: 'Interação com pacientes recebendo respostas imediatas.'
+      title: t('feedback'),
+      description: t('feedbackText')
     },
     {
       icon: <PlayIcon />,
-      title: 'Multiplataforma',
-      description:
-        'Interações em todos os ambientes, possibilitando maior conexão com a realidade.'
+      title: t('multiplataform'),
+      description: t('multiplataformText')
     },
     {
       icon: <GlobeIcon />,
-      title: 'Treinamentos completos',
-      description: 'Interação na discussão em todas as etapas.'
+      title: t('training'),
+      description: t('trainingText')
     },
     {
       icon: <ShieldCheckIcon />,
-      title: 'Customização',
-      description: 'Possibilidade de processos 100% customizados.'
+      title: t('customization'),
+      description: t('customizationText')
     }
   ];
 

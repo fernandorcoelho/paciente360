@@ -1,5 +1,6 @@
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 import {
   CircunferenceCircles2,
   CircunferenceCircles3
@@ -10,6 +11,7 @@ import { DifferentialsBox } from './DifferentialsBox';
 import styles from './styles.module.scss';
 
 export const DifferentialsSection = () => {
+  const { t } = useTranslation();
   const { width } = useWindowDimensions();
 
   return (
@@ -26,14 +28,9 @@ export const DifferentialsSection = () => {
       {width > 768 && (
         <div className={styles.differentialsSectionContainer}>
           <span>
-            <strong>Diferenciais</strong> da
-            <br />
-            nossa plataforma
+            <strong>{t('differentialsHead1')}</strong> {t('differentialsHead2')}
           </span>
-          <p>
-            Garantimos a aprendizagem de forma prática e interativa,
-            <br /> envolvendo todas as etapas da jornada do paciente.
-          </p>
+          <p>{t('differentialsText')}</p>
           <DifferentialsBox /> {/* Listagem de diferenciais */}
         </div>
       )}
@@ -55,12 +52,9 @@ export const DifferentialsSection = () => {
       {width !== 0 && width <= 768 && (
         <div className={styles.differentialsSectionContainer}>
           <span>
-            <strong>Diferenciais</strong> da nossa plataforma
+            <strong>{t('differentialsHead1')}</strong> {t('differentialsHead2')}
           </span>
-          <p>
-            Garantimos a aprendizagem de forma prática e interativa, envolvendo
-            todas as etapas da jornada do paciente.
-          </p>
+          <p>{t('differentialsText')}</p>
         </div>
       )}
     </section>

@@ -8,8 +8,10 @@ import notebookGif from '../../../../public/gifs/notebook-animation.gif';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 
 import styles from './styles.module.scss';
+import { useTranslation } from 'react-i18next';
 
 export const ContactSpecialistSection = () => {
+  const { t } = useTranslation();
   const { width } = useWindowDimensions();
 
   return (
@@ -18,9 +20,7 @@ export const ContactSpecialistSection = () => {
         <div className={styles.contactSpecialistContainer}>
           <div>
             <span>
-              Fale com um
-              <br />
-              <strong>especialista</strong>
+              Fale com um <strong>especialista</strong>
             </span>
           </div>
         </div>
@@ -46,20 +46,17 @@ export const ContactSpecialistSection = () => {
         <div>
           {width > 768 && (
             <span>
-              Fale com um
-              <br />
-              <strong>especialista</strong>
+              {t('specialistHead1')} <strong>{t('specialistHead2')}</strong>
             </span>
           )}
           <Button variant="secondary">
-            <span>Fale com um especialista agora</span>
+            <span>{t('talkToExpertNow')}</span>
             <ArrowRightIcon />
           </Button>
         </div>
 
         <p>
-          E tenha acesso à mais avançada plataforma{' '}
-          <strong>de ensino médico do mundo!</strong>
+          {t('specialistText1')} <strong>{t('specialistText2')}</strong>
         </p>
       </div>
       {/* Lado direito contento CTA Button e textos */}

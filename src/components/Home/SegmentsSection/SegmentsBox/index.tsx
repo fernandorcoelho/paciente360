@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   HealthIcon,
   MedicalBookIcon,
@@ -16,26 +17,25 @@ type ItemBoxProps = {
 };
 
 export const SegmentsBox = () => {
+  const { t } = useTranslation();
+
   const itemBoxArr: ItemBoxProps[] = [
     {
       icon: <MedicalBookIcon />,
-      title: 'Universidade',
-      description:
-        'No ambiente universitário, provocamos uma verdadeira revolução no ensino da medicina e outros cursos da saúde ao utilizar o ambiente digital para unir teoria e prática. A plataforma garante a aprendizagem com base na realidade desde o início do curso de graduação.',
+      title: t('university'),
+      description: t('universityText'),
       link: '#'
     },
     {
       icon: <ScienceIcon />,
-      title: 'Indústria farmacêutica',
-      description:
-        'Ilustramos o uso de medicamentos de forma customizada, com divulgação das informações científicas e apresentação de casos clínicos, mostrando a correta utilização de cada um deles.',
+      title: t('industry'),
+      description: t('industryText'),
       link: '#'
     },
     {
       icon: <HealthIcon />,
-      title: 'Hospitais',
-      description:
-        'Para hospitais, temos uma solução versátil e capaz de incorporar novos conteúdos com rapidez. A plataforma faz uso do meio digital para simular todas as etapas do atendimento em saúde de forma humanizada, oferecendo a hospitais a possibilidade de treinar equipes em escala.',
+      title: t('hospitals'),
+      description: t('hospitalsText'),
       link: '#'
     }
   ];

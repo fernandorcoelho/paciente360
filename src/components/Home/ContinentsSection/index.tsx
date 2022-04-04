@@ -7,8 +7,11 @@ import Image from 'next/image';
 
 import styles from './styles.module.scss';
 import { TrophyIcon } from '../../../../public/icons/Icons';
+import { useTranslation } from 'react-i18next';
 
 export const ContinentsSection = () => {
+  const { t } = useTranslation();
+
   // Início: Animação de contador
   const counterVariants = {
     visible: { opacity: 1, transition: { duration: 0.5 } },
@@ -44,7 +47,7 @@ export const ContinentsSection = () => {
       {/* Linear Gradient Background */}
       <div className={styles.continentsSectionContainer}>
         <span>
-          Presente em quase todos os <strong>continentes do mundo</strong>
+          {t('continentsHead1')} <strong>{t('continentsHead2')}</strong>
         </span>
 
         <div className={styles.dataContainer}>
@@ -55,9 +58,9 @@ export const ContinentsSection = () => {
             </strong>
 
             <strong>
-              Casos
+              {t('cases1')}
               <br />
-              Clínicos
+              {t('cases2')}
             </strong>
           </div>
 
@@ -68,9 +71,9 @@ export const ContinentsSection = () => {
             </strong>
 
             <strong>
-              Pessoas
+              {t('people1')}
               <br />
-              utilizam
+              {t('people2')}
             </strong>
           </div>
 
@@ -80,7 +83,7 @@ export const ContinentsSection = () => {
               {DinamicCountUp(35)}
             </strong>
 
-            <strong>Especialidades</strong>
+            <strong>{t('specialties')}</strong>
           </div>
 
           <div>
@@ -88,14 +91,11 @@ export const ContinentsSection = () => {
               <span>+</span>00
             </strong>
 
-            <strong>Projetos</strong>
+            <strong>{t('projects')}</strong>
           </div>
         </div>
 
-        <p>
-          Democratizamos o acesso á educação em saúde, possibilitando que
-          milhares de pessoas recebam informações de forma acessível e prática.
-        </p>
+        <p>{t('continentsText')}</p>
       </div>
       {/* Lado esquerdo */}
       <div className={styles.imageContainer}>

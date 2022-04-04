@@ -1,4 +1,11 @@
-import { MutableRefObject, useEffect, useRef, useState } from 'react';
+import {
+  MutableRefObject,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   BRFlag,
   USFlag,
@@ -8,41 +15,76 @@ import {
 
 import styles from './styles.module.scss';
 
+type ILanguageOptions = {
+  name: 'PT' | 'EN' | 'ES';
+  fullName: 'PT-BR' | 'EN-US' | 'ES-ES';
+  value: 'pt-BR' | 'en' | 'es';
+  flag: ReactNode;
+};
+
 export const LanguagesButton = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState<'pt' | 'en' | 'es'>('pt');
+  const { i18n } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState<ILanguageOptions>();
+  // Opção de língua selecionada
+  const languageOptions: ILanguageOptions[] = [
+    {
+      name: 'PT',
+      fullName: 'PT-BR',
+      value: 'pt-BR',
+      flag: <BRFlag />
+    },
+    {
+      name: 'EN',
+      fullName: 'EN-US',
+      value: 'en',
+      flag: <USFlag />
+    },
+    {
+      name: 'ES',
+      fullName: 'ES-ES',
+      value: 'es',
+      flag: <ESFlag />
+    }
+  ];
+  // Listagem de opções de idiomas
+
+  useEffect(() => {
+    switch (i18n.language) {
+      case 'pt-BR':
+        return setSelectedOption(languageOptions[0]);
+      case 'en':
+        return setSelectedOption(languageOptions[1]);
+      case 'es':
+        return setSelectedOption(languageOptions[2]);
+      default:
+        break;
+    }
+  }, [i18n.language]);
+  // Seta o idioma selecionado de acordo com o i18n
 
   const dropdownRef = useRef(null);
   useOutsideClick(dropdownRef);
 
-  const Flag = () => {
-    if (selected === 'pt') {
-      return <BRFlag />;
-    } else if (selected === 'en') {
-      return <USFlag />;
-    } else {
-      return <ESFlag />;
-    }
-  };
-
   function useOutsideClick(ref: MutableRefObject<any>) {
     useEffect(() => {
       /**
-       * Alert if clicked on outside of element
+       * Detecta o click fora do elemento
        */
       function handleClickOutside(event: { target: any }) {
         if (ref.current && !ref.current.contains(event.target)) {
           setIsOpen(false);
         }
       }
-      // Bind the event listener
+      // Adiciona o event listener
       document.addEventListener('mousedown', handleClickOutside);
       return () => {
-        // Unbind the event listener on clean up
+        // Remove o event listener e limpa
         document.removeEventListener('mousedown', handleClickOutside);
       };
     }, [ref]);
   }
+  // Função para click fora do dropdown o fechar
 
   return (
     <div className={styles.container} ref={dropdownRef}>
@@ -51,25 +93,24 @@ export const LanguagesButton = () => {
         className={styles.languagesBtn}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Flag />
-        <span>{selected.toUpperCase()}</span>
+        {selectedOption?.flag}
+        <span>{selectedOption?.name}</span>
         <ChevronDownIcon />
       </button>
 
       {isOpen && (
         <div className={styles.dropdown}>
-          <button type="button" onClick={() => setSelected('pt')}>
-            <BRFlag />
-            <span>PT-BR</span>
-          </button>
-          <button type="button" onClick={() => setSelected('en')}>
-            <USFlag />
-            <span>EN-US</span>
-          </button>
-          <button type="button" onClick={() => setSelected('es')}>
-            <ESFlag />
-            <span>ES-ES</span>
-          </button>
+          {languageOptions.map((item) => (
+            <button
+              type="button"
+              onClick={() => {
+                i18n.changeLanguage(item.value);
+              }}
+            >
+              {item.flag}
+              <span>{item.fullName}</span>
+            </button>
+          ))}
         </div>
       )}
     </div>
