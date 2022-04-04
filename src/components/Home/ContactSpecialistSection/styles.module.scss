@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 4.063rem;
+  margin-left: 4.063rem;
 
   padding: 6.25rem 0 9.375rem;
 
@@ -33,6 +33,7 @@
     flex-direction: column-reverse;
     width: 100%;
     padding: 0 7.9795%;
+    margin-left: 0;
   }
 
   > div {
@@ -52,6 +53,7 @@
         font-size: 1.875rem;
         line-height: 1.875rem;
         margin-bottom: 1.563rem;
+        max-width: 11.25rem;
       }
 
       > strong {
@@ -64,6 +66,7 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
     color: var(--gray-600);
+    margin-left: 4.063rem;
 
     max-width: 16.25rem;
 
@@ -71,6 +74,8 @@
       font-size: 1.25rem;
       line-height: 1.75rem;
       text-align: center;
+      margin-left: 0;
+      margin-bottom: 6rem;
     }
 
     > strong {
