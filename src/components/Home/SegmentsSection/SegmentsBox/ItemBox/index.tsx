@@ -24,12 +24,12 @@ export const ItemBox = ({ icon, title, description, link }: ItemBoxProps) => {
 
       <p>{description}</p>
 
-      <Link href={link}>
+      {/* <a href={link}>
         <Button variant="secondary">
           <span>{t('knowMore')}</span>
           <ArrowRightIcon />
         </Button>
-      </Link>
+      </a> */}
     </div>
   );
 };

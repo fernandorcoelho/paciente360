@@ -43,17 +43,19 @@ export const TryoutSection = () => {
           {t('tryoutHead3')}
         </span>
 
-        <Button variant="secondary">
-          <span>{t('tryoutForFree')}</span>
-          <ArrowRightIcon />
-        </Button>
+        <a href="https://app.paciente360.com.br/login">
+          <Button variant="secondary">
+            <span>{t('tryoutForFree')}</span>
+            <ArrowRightIcon />
+          </Button>
+        </a>
       </motion.div>
     );
   }
   // Fim: Animação de opacidade ao carregar a página
 
   return (
-    <section className={styles.tryoutSectionContainer} id="para-quem">
+    <section className={styles.tryoutSectionContainer} id="denise">
       <div className={styles.imgContainer}>
         <Image
           src={whiteLogoImg}

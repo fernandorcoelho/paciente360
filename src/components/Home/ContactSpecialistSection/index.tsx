@@ -49,10 +49,12 @@ export const ContactSpecialistSection = () => {
               {t('specialistHead1')} <strong>{t('specialistHead2')}</strong>
             </span>
           )}
-          <Button variant="secondary">
-            <span>{t('talkToExpertNow')}</span>
-            <ArrowRightIcon />
-          </Button>
+          <a href="">
+            <Button variant="secondary">
+              <span>{t('talkToExpertNow')}</span>
+              <ArrowRightIcon />
+            </Button>
+          </a>
         </div>
 
         <p>

@@ -35,7 +35,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <main className={styles.heroSectionContainer} id="hero">
+    <main className={styles.heroSectionContainer} id="solucoes">
       <div className={styles.linearGradientBg} />
       {/* Linear Gradient Background */}
       <div className={styles.videoContainer}>
@@ -91,10 +91,12 @@ export const HeroSection = () => {
           <strong>{t('heroText4')}</strong>.
         </p>
 
-        <Button variant={width > 768 ? 'secondary' : 'tertiary'}>
-          <span>{t('tryoutForFree')}</span>
-          <ArrowRightIcon />
-        </Button>
+        <a href="https://app.paciente360.com.br/login">
+          <Button variant={width > 768 ? 'secondary' : 'tertiary'}>
+            <span>{t('tryoutForFree')}</span>
+            <ArrowRightIcon />
+          </Button>
+        </a>
       </div>
       {/* Seção informativa */}
     </main>

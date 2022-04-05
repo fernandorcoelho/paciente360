@@ -7,7 +7,7 @@ export const SegmentsSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.segmentsSectionContainer} id="plataforma">
+    <section className={styles.segmentsSectionContainer} id="para-quem">
       <div className={styles.segmentsSection}>
         <span>
           {t('casesHead1')} <strong>{t('casesHead2')}</strong>

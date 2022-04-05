@@ -42,7 +42,7 @@ export const ContinentsSection = () => {
   // Fim: Animação de contador
 
   return (
-    <section className={styles.continentsSectionWrapper} id="casos">
+    <section className={styles.continentsSectionWrapper}>
       <div className={styles.linearGradientBg} />
       {/* Linear Gradient Background */}
       <div className={styles.continentsSectionContainer}>

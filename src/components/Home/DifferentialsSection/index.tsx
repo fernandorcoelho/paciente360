@@ -15,10 +15,7 @@ export const DifferentialsSection = () => {
   const { width } = useWindowDimensions();
 
   return (
-    <section
-      className={styles.differentialsSectionWrapper}
-      id="fique-por-dentro"
-    >
+    <section className={styles.differentialsSectionWrapper}>
       {width !== 0 && width <= 768 && (
         <div className={styles.mobileDifferentialsBoxContainer}>
           <DifferentialsBox />

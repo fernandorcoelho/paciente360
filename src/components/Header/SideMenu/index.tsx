@@ -35,10 +35,12 @@ export const SideMenu = ({
               </li>
             </Link>
           ))}
-          <Button>
-            <span>{t('accessPlatform')}</span>
-            <TrialIcon />
-          </Button>
+          <a href="https://app.paciente360.com.br/login">
+            <Button>
+              <span>{t('accessPlatform')}</span>
+              <TrialIcon />
+            </Button>
+          </a>
         </ul>
       </nav>
     </div>

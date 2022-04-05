@@ -34,19 +34,19 @@ export const Footer = () => {
       id: 0,
       icon: <LinkedinIcon />,
       text: 'Paciente360',
-      link: '#'
+      link: 'https://www.linkedin.com/company/paciente360'
     },
     {
       id: 1,
       icon: <FacebookIcon />,
       text: 'Paciente360',
-      link: '#'
+      link: 'https://www.facebook.com/paciente360'
     },
     {
       id: 2,
       icon: <InstagramIcon />,
       text: 'Paciente360',
-      link: '#'
+      link: 'https://www.instagram.com/paciente360/'
     }
   ];
 
@@ -72,7 +72,7 @@ export const Footer = () => {
     {
       id: 0,
       text: 'Home',
-      link: '#hero'
+      link: '#solucoes'
     },
     {
       id: 1,
@@ -154,7 +154,7 @@ export const Footer = () => {
         {/* Navegação */}
       </div>
       {width !== 0 && width <= 768 && (
-        <Link href="#hero">
+        <Link href="#solucoes">
           <button type="button" className={styles.btn}>
             <CircleArrowUpIcon />
             <p>{t('backToTop')}</p>
@@ -166,7 +166,7 @@ export const Footer = () => {
       <div className={styles.bottomContainer}>
         <p>Paciente 360 • 2022 Todos os direitos reservados</p>
         {width > 768 && (
-          <Link href="#hero">
+          <Link href="#solucoes">
             <button type="button" className={styles.btn}>
               <CircleArrowUpIcon />
               <p>{t('backToTop')}</p>

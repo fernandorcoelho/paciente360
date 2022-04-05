@@ -47,7 +47,7 @@ export const PlatformSection = () => {
   // Fim: Animação de translate da imagem dos médicos
 
   return (
-    <section className={styles.platformSectionWrapper} id="solucoes">
+    <section className={styles.platformSectionWrapper} id="plataforma">
       <div className={styles.linearGradientBg} />
       {/* Linear Gradient Background */}
       <div className={styles.platformSectionContainer}>
@@ -58,11 +58,13 @@ export const PlatformSection = () => {
 
           <p>{t('platformText')}</p>
 
-          <Button variant="secondary">
-            <span>{t('tryoutNow')}</span>
-            <ArrowRightIcon />
-          </Button>
-        </div>{' '}
+          <a href="https://app.paciente360.com.br/login">
+            <Button variant="secondary">
+              <span>{t('tryoutNow')}</span>
+              <ArrowRightIcon />
+            </Button>
+          </a>
+        </div>
         {/* Seção informativa */}
         <SmilingDoctors />
         {/* Imagem dos médicos */}

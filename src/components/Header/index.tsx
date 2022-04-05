@@ -57,7 +57,7 @@ export function Header() {
     {
       id: 3,
       text: t('cases'),
-      link: '#casos'
+      link: '#denise'
     },
     {
       id: 4,
@@ -67,7 +67,7 @@ export function Header() {
     {
       id: 5,
       text: t('contact'),
-      link: '#contato'
+      link: '#'
     }
   ];
 
@@ -105,10 +105,12 @@ export function Header() {
             <div>
               <LanguagesButton />
 
-              <Button>
-                <span>{t('accessPlatform')}</span>
-                <TrialIcon />
-              </Button>
+              <a href="https://app.paciente360.com.br/login">
+                <Button>
+                  <span>{t('accessPlatform')}</span>
+                  <TrialIcon />
+                </Button>
+              </a>
             </div>
             {/* Botões de Idioma e Experimente grátis */}
           </div>
