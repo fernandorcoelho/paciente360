@@ -88,10 +88,11 @@ export const ContinentsSection = () => {
 
           <div>
             <strong>
-              <span>+</span>00
+              <span>+</span>
+              {DinamicCountUp(18)}
             </strong>
 
-            <strong>{t('projects')}</strong>
+            <strong>{t('countries')}</strong>
           </div>
         </div>
 
