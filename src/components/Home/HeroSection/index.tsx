@@ -42,10 +42,8 @@ export const HeroSection = () => {
         <iframe
           frameBorder={0}
           allowFullScreen
-          width="100%"
-          height="100%"
           allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-          src="https://youtube.com/embed/qXC4AyjRikg?playlist=qXC4AyjRikg&autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&mute=1&modestbranding=1&rel=0"
+          src="https://youtube.com/embed/fBdM0U1KarI?playlist=fBdM0U1KarI&autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&mute=1&modestbranding=1&rel=0"
         />
       </div>
       {/* Video tocando no BG */}
