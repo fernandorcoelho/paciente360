@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import {
   MutableRefObject,
   ReactNode,
@@ -7,6 +6,7 @@ import {
   useState
 } from 'react';
 import { useTranslation } from 'react-i18next';
+import { handleSaveDataInCookie } from 'utils/saveCookies';
 import {
   BRFlag,
   USFlag,
@@ -24,7 +24,6 @@ type ILanguageOptions = {
 };
 
 export const LanguagesButton = () => {
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const { i18n } = useTranslation();
   const [selectedOption, setSelectedOption] = useState<ILanguageOptions>();
@@ -90,6 +89,12 @@ export const LanguagesButton = () => {
   }
   // Função para click fora do dropdown o fechar
 
+  const handleChangeLanguage = (value: string) => {
+    i18n.changeLanguage(value);
+    setIsOpen(false);
+    handleSaveDataInCookie({ data: value, keyCookie: 'language' });
+  };
+
   return (
     <div className={styles.container} ref={dropdownRef}>
       <button
@@ -107,11 +112,7 @@ export const LanguagesButton = () => {
           {languageOptions.map((item) => (
             <button
               type="button"
-              onClick={() => {
-                i18n.changeLanguage(item.value);
-                setIsOpen(false);
-                // router.replace('https://localhost:3000/' + i18n.language);
-              }}
+              onClick={() => handleChangeLanguage(item.value)}
             >
               {item.flag}
               <span>{item.fullName}</span>
