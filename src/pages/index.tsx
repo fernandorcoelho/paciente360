@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { HeroSection } from '../components/Home/HeroSection';
@@ -18,7 +19,7 @@ import { ContactSpecialistSection } from '../components/Home/ContactSpecialistSe
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import { useTranslation } from 'react-i18next';
 
-export default function Home() {
+const Home: NextPage = () => {
   const { width } = useWindowDimensions();
   const { i18n } = useTranslation();
 
@@ -71,4 +72,6 @@ export default function Home() {
       <ContactSpecialistSection />
     </>
   );
-}
+};
+
+export default Home;

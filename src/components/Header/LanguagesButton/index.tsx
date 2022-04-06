@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import {
   MutableRefObject,
   ReactNode,
@@ -23,10 +24,13 @@ type ILanguageOptions = {
 };
 
 export const LanguagesButton = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const { i18n } = useTranslation();
   const [selectedOption, setSelectedOption] = useState<ILanguageOptions>();
-  // Opção de língua selecionada
+  // Estado da língua selecionada
+  console.log(i18n.language);
+
   const languageOptions: ILanguageOptions[] = [
     {
       name: 'PT',
@@ -106,6 +110,7 @@ export const LanguagesButton = () => {
               onClick={() => {
                 i18n.changeLanguage(item.value);
                 setIsOpen(false);
+                // router.replace('https://localhost:3000/' + i18n.language);
               }}
             >
               {item.flag}

@@ -81,13 +81,16 @@ export function Header() {
         }
       >
         <div className={styles.headerContent}>
-          <Image
-            src={logoImg}
-            alt="Logo"
-            objectFit="contain"
-            // height={60}
-            width={width > 768 ? 120 : 90}
-          />
+          <Link href="/">
+            <Image
+              src={logoImg}
+              alt="Logo"
+              objectFit="contain"
+              className={styles.logo}
+              // height={60}
+              width={width > 768 ? 120 : 90}
+            />
+          </Link>
           {/* Lado esquerdo */}
           <div className={styles.navItems}>
             <nav>
