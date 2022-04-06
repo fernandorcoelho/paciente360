@@ -34,6 +34,8 @@ export const HeroSection = () => {
     }
   };
 
+  function CustomTypewriter() {}
+
   return (
     <main className={styles.heroSectionContainer} id="solucoes">
       <div className={styles.linearGradientBg} />

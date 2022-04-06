@@ -6,15 +6,47 @@ import { SegmentsSection } from '../components/Home/SegmentsSection';
 import { TryoutSection } from '../components/Home/TryoutSection';
 import { ContinentsSection } from '../components/Home/ContinentsSection';
 import deniseImg from '../../public/images/denise.png';
-import deniseMobileImg from '../../public/images/deniseMobile.jpg';
+import deniseImgEn from '../../public/images/denise-en.png';
+import deniseImgEs from '../../public/images/denise-es.png';
+import deniseMobileImg from '../../public/images/denise-mobile.jpg';
+import deniseMobileImgEn from '../../public/images/denise-mobile-en.png';
+import deniseMobileImgEs from '../../public/images/denise-mobile-es.png';
 
 import styles from './home.module.scss';
 import { DifferentialsSection } from '../components/Home/DifferentialsSection';
 import { ContactSpecialistSection } from '../components/Home/ContactSpecialistSection';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   const { width } = useWindowDimensions();
+  const { i18n } = useTranslation();
+
+  const handleBackgroundImageSrc = () => {
+    if (width > 768) {
+      switch (i18n.language) {
+        case 'pt-BR':
+          return deniseImg;
+        case 'en':
+          return deniseImgEn;
+        case 'es':
+          return deniseImgEs;
+        default:
+          return;
+      }
+    } else {
+      switch (i18n.language) {
+        case 'pt-BR':
+          return deniseMobileImg;
+        case 'en':
+          return deniseMobileImgEn;
+        case 'es':
+          return deniseMobileImgEs;
+        default:
+          return;
+      }
+    }
+  };
 
   return (
     <>
@@ -24,7 +56,7 @@ export default function Home() {
 
       <div className={styles.imageContainer}>
         <Image
-          src={width > 768 ? deniseImg : deniseMobileImg}
+          src={handleBackgroundImageSrc()}
           objectFit="cover"
           alt="Foto de Denise com diagnóstico"
         />

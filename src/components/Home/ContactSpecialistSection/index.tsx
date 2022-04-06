@@ -5,14 +5,29 @@ import {
 } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
 import notebookGif from '../../../../public/gifs/notebook-animation.gif';
+import notebookGifEn from '../../../../public/gifs/notebook-animation-en.gif';
+import notebookGifEs from '../../../../public/gifs/notebook-animation-es.gif';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 
 import styles from './styles.module.scss';
 import { useTranslation } from 'react-i18next';
 
 export const ContactSpecialistSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { width } = useWindowDimensions();
+
+  const handleNotebookGifSrc = () => {
+    switch (i18n.language) {
+      case 'pt-BR':
+        return notebookGif;
+      case 'en':
+        return notebookGifEn;
+      case 'es':
+        return notebookGifEs;
+      default:
+        return;
+    }
+  };
 
   return (
     <section className={styles.contactSpecialistWrapper} id="contato">
@@ -29,7 +44,7 @@ export const ContactSpecialistSection = () => {
       <div className={styles.gifContainer}>
         <div className={styles.imgContainer}>
           <Image
-            src={notebookGif}
+            src={handleNotebookGifSrc()}
             alt="Macbook"
             objectFit="contain"
             layout="intrinsic"

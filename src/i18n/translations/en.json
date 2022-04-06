@@ -25,9 +25,9 @@
     "hospitals": "Hospitals",
     "hospitalsText": "For hospitals, we have a versatile solution capable of quickly incorporating new content. The platform makes use of digital media to simulate all stages of health care in a humanized way, offering hospitals the possibility of training teams at scale.",
     "knowMore": "Know more",
-    "tryoutHead1": "We design",
-    "tryoutHead2": "simulations of clinical scenarios",
-    "tryoutHead3": "in order to allow interaction in a safe and realistic environment",
+    "tryoutHead1": "",
+    "tryoutHead2": "Simulations of clinical scenarios",
+    "tryoutHead3": "with patients allow interaction in a safe and realistic environment",
     "continentsHead1": "Present on almost every",
     "continentsHead2": "continent in the world",
     "cases1": "Clinical",
@@ -69,7 +69,6 @@
     "stayIn": "Stay in",
     "rightsReserved": "Paciente 360 • 2022 All rights reserved",
     "backToTop": "Back to the top",
-    "developedBy": "Developed by:",
     "contact": "Contact",
     "accessPlatform": "Access the platform now"
   }

@@ -105,6 +105,7 @@ export const LanguagesButton = () => {
               type="button"
               onClick={() => {
                 i18n.changeLanguage(item.value);
+                setIsOpen(false);
               }}
             >
               {item.flag}

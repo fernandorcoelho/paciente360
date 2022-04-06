@@ -175,12 +175,6 @@ export const Footer = () => {
         )}
         <div>
           <AbedIcon />
-          {width > 768 && (
-            <div>
-              <p>{t('developedBy')}</p>
-              <FastersIcon />
-            </div>
-          )}
         </div>
       </div>
       {/* Parte de baixo do footer */}
