@@ -56,7 +56,7 @@ export const HeroSection = () => {
           frameBorder={0}
           allowFullScreen
           allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-          src="https://youtube.com/embed/fBdM0U1KarI?playlist=fBdM0U1KarI&autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&mute=1&modestbranding=1&rel=0"
+          src="https://www.youtube.com/embed/fBdM0U1KarI?controls=0&autoplay=1&mute=1&playlist=fBdM0U1KarI&loop=1"
         />
       </div>
       {/* Video tocando no BG */}
