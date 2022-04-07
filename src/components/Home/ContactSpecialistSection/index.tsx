@@ -64,7 +64,7 @@ export const ContactSpecialistSection = () => {
               {t('specialistHead1')} <strong>{t('specialistHead2')}</strong>
             </span>
           )}
-          <a href="">
+          <a href="https://conteudo.paciente360.com.br/contato">
             <Button variant="secondary">
               <span>{t('talkToExpertNow')}</span>
               <ArrowRightIcon />

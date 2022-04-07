@@ -72,7 +72,7 @@ export const Footer = () => {
     {
       id: 0,
       text: 'Home',
-      link: '#solucoes'
+      link: '#'
     },
     {
       id: 1,
@@ -92,7 +92,7 @@ export const Footer = () => {
     {
       id: 4,
       text: t('cases'),
-      link: '#casos'
+      link: '#denise'
     },
     {
       id: 5,

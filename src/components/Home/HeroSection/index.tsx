@@ -16,12 +16,6 @@ export const HeroSection = () => {
   const { t, i18n } = useTranslation();
   const { width } = useWindowDimensions();
 
-  const firstTextElArr = [
-    t('casosClinicos'),
-    t('comportamentos'),
-    t('pacientes')
-  ];
-
   const [textElContent, setTextElContent] = useState('');
 
   const handleChangeSecondText = (i: number) => {
@@ -37,17 +31,17 @@ export const HeroSection = () => {
   const handleTypewriterSettings = (typewriter: TypewriterClass) => {
     typewriter
       .callFunction(() => handleChangeSecondText(0))
-      .typeString(firstTextElArr[0])
+      .typeString(t('casosClinicos'))
       .pauseFor(2500)
       .deleteAll()
       .start()
       .callFunction(() => handleChangeSecondText(1))
-      .typeString(firstTextElArr[1])
+      .typeString(t('comportamentos'))
       .pauseFor(2500)
       .deleteAll()
       .start()
       .callFunction(() => handleChangeSecondText(2))
-      .typeString(firstTextElArr[2])
+      .typeString(t('pacientes'))
       .pauseFor(2500)
       .deleteAll()
       .start();

@@ -67,7 +67,7 @@ export function Header() {
     {
       id: 5,
       text: t('contact'),
-      link: '#'
+      link: 'https://conteudo.paciente360.com.br/contato'
     }
   ];
 
