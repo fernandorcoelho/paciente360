@@ -4,7 +4,7 @@ import {
   CircunferenceCircles
 } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
-import Typewriter from 'typewriter-effect';
+import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import Image from 'next/image';
 import smilingDoctorsImg from '../../../../public/images/smiling_doctors.png';
@@ -24,17 +24,34 @@ export const HeroSection = () => {
 
   const [textElContent, setTextElContent] = useState('');
 
-  const handleTypewriter = (i: number) => {
-    if (i === 1) {
+  const handleChangeSecondText = (i: number) => {
+    if (i === 0) {
       setTextElContent(t('interativos'));
-    } else if (i === 2) {
+    } else if (i === 1) {
       setTextElContent(t('reais'));
-    } else if (i === 3) {
+    } else if (i === 2) {
       setTextElContent(t('humanizados'));
     }
   };
 
-  function CustomTypewriter() {}
+  const handleTypewriterSettings = (typewriter: TypewriterClass) => {
+    typewriter
+      .callFunction(() => handleChangeSecondText(0))
+      .typeString(firstTextElArr[0])
+      .pauseFor(2500)
+      .deleteAll()
+      .start()
+      .callFunction(() => handleChangeSecondText(1))
+      .typeString(firstTextElArr[1])
+      .pauseFor(2500)
+      .deleteAll()
+      .start()
+      .callFunction(() => handleChangeSecondText(2))
+      .typeString(firstTextElArr[2])
+      .pauseFor(2500)
+      .deleteAll()
+      .start();
+  };
 
   return (
     <main className={styles.heroSectionContainer} id="solucoes">
@@ -62,24 +79,7 @@ export const HeroSection = () => {
                 autoStart: true,
                 loop: true
               }}
-              onInit={(typewriter) => {
-                typewriter
-                  .callFunction(() => handleTypewriter(1))
-                  .typeString(firstTextElArr[0])
-                  .pauseFor(2500)
-                  .deleteAll()
-                  .start()
-                  .callFunction(() => handleTypewriter(2))
-                  .typeString(firstTextElArr[1])
-                  .pauseFor(2500)
-                  .deleteAll()
-                  .start()
-                  .callFunction(() => handleTypewriter(3))
-                  .typeString(firstTextElArr[2])
-                  .pauseFor(2500)
-                  .deleteAll()
-                  .start();
-              }}
+              onInit={(typewriter) => handleTypewriterSettings(typewriter)}
             />
           </span>
           {/* Typewriter */}

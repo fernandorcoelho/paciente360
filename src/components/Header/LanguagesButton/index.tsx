@@ -28,7 +28,6 @@ export const LanguagesButton = () => {
   const { i18n } = useTranslation();
   const [selectedOption, setSelectedOption] = useState<ILanguageOptions>();
   // Estado da língua selecionada
-  console.log(i18n.language);
 
   const languageOptions: ILanguageOptions[] = [
     {
