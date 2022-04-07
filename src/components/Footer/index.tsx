@@ -97,7 +97,7 @@ export const Footer = () => {
     {
       id: 5,
       text: t('stayIn'),
-      link: '#fique-por-dentro'
+      link: '#continents'
     }
   ];
 

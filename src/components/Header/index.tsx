@@ -62,7 +62,7 @@ export function Header() {
     {
       id: 4,
       text: t('stayIn'),
-      link: '#fique-por-dentro'
+      link: '#continents'
     },
     {
       id: 5,
