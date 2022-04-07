@@ -11,6 +11,7 @@ import smilingDoctorsImg from '../../../../public/images/smiling_doctors.png';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
+import Router from 'next/router';
 
 export const HeroSection = () => {
   const { t, i18n } = useTranslation();
@@ -46,6 +47,10 @@ export const HeroSection = () => {
       .deleteAll()
       .start();
   };
+
+  i18n.on('languageChanged', function (lng) {
+    Router.reload();
+  });
 
   return (
     <main className={styles.heroSectionContainer} id="solucoes">
