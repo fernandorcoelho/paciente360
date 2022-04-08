@@ -32,7 +32,7 @@ export const ContactSpecialistSection = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 100);
   }, []);
 
   return (
