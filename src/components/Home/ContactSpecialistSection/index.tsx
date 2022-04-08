@@ -54,7 +54,7 @@ export const ContactSpecialistSection = () => {
             className={styles.gif}
           />
           <iframe
-            src={handleNotebookVideoSrc()}
+            src="https://player.vimeo.com/video/697355493?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0"
             frameBorder="0"
             className={styles.iframe}
             width={width > 768 ? 500 : 250}
