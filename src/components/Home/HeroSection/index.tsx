@@ -61,7 +61,7 @@ export const HeroSection = () => {
           frameBorder={0}
           allowFullScreen
           allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-          src="https://player.vimeo.com/video/697355493?background=1&autoplay=1&loop=1&byline=0&title=0"
+          src="https://player.vimeo.com/video/697355493?background=1&autoplay=1&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0"
         />
       </div>
       {/* Video tocando no BG */}
