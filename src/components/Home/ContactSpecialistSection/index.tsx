@@ -20,11 +20,11 @@ export const ContactSpecialistSection = () => {
   const handleNotebookVideoSrc = () => {
     switch (i18n.language) {
       case 'pt-BR':
-        return 'https://player.vimeo.com/video/697408984?background=1&autoplay=1&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
+        return 'https://player.vimeo.com/video/697408984?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
       case 'en':
-        return 'https://player.vimeo.com/video/697408304?background=1&autoplay=1&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
+        return 'https://player.vimeo.com/video/697408304?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
       case 'es':
-        return 'https://player.vimeo.com/video/697407831?background=1&autoplay=1&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
+        return 'https://player.vimeo.com/video/697407831?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
       default:
         return;
     }
