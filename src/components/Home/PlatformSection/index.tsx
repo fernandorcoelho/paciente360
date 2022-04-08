@@ -3,7 +3,7 @@ import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRightIcon } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
-import smilingDoctorsImg from '../../../../public/images/smiling_doctors.png';
+import smilingDoctorsImg from '../../../../public/images/smiling-doctors.png';
 
 import styles from './styles.module.scss';
 import Image from 'next/image';

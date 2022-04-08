@@ -7,7 +7,7 @@ import { Button } from '../../Button';
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import Image from 'next/image';
-import smilingDoctorsImg from '../../../../public/images/smiling_doctors.png';
+import smilingDoctorsImg from '../../../../public/images/smiling-doctors.png';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
@@ -61,7 +61,7 @@ export const HeroSection = () => {
           frameBorder={0}
           allowFullScreen
           allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-          src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0"
+          src="https://player.vimeo.com/video/697355493?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0"
         />
       </div>
       {/* Video tocando no BG */}

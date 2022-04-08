@@ -4,6 +4,7 @@ import {
   CircunferenceCircles3
 } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
+import macbookImg from '../../../../public/images/macbook.png';
 import notebookGif from '../../../../public/gifs/notebook-animation.gif';
 import notebookGifEn from '../../../../public/gifs/notebook-animation-en.gif';
 import notebookGifEs from '../../../../public/gifs/notebook-animation-es.gif';
@@ -16,18 +17,18 @@ export const ContactSpecialistSection = () => {
   const { t, i18n } = useTranslation();
   const { width } = useWindowDimensions();
 
-  const handleNotebookGifSrc = () => {
-    switch (i18n.language) {
-      case 'pt-BR':
-        return notebookGif;
-      case 'en':
-        return notebookGifEn;
-      case 'es':
-        return notebookGifEs;
-      default:
-        return;
-    }
-  };
+  // const handleNotebookGifSrc = () => {
+  //   switch (i18n.language) {
+  //     case 'pt-BR':
+  //       return notebookGif;
+  //     case 'en':
+  //       return notebookGifEn;
+  //     case 'es':
+  //       return notebookGifEs;
+  //     default:
+  //       return;
+  //   }
+  // };
 
   return (
     <section className={styles.contactSpecialistWrapper} id="contato">
@@ -44,13 +45,20 @@ export const ContactSpecialistSection = () => {
       <div className={styles.gifContainer}>
         <div className={styles.imgContainer}>
           <Image
-            src={handleNotebookGifSrc()}
+            src={macbookImg}
             alt="Macbook"
             objectFit="contain"
             layout="intrinsic"
             width={width > 768 ? 620 : 350}
             height={width > 768 ? 620 : 350}
             className={styles.gif}
+          />
+          <iframe
+            src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0"
+            frameBorder="0"
+            className={styles.iframe}
+            width={width > 768 ? 500 : 250}
+            height={width > 768 ? 500 : 250}
           />
         </div>
         <CircunferenceCircles3 size={width > 768 ? 500 : 260} />
