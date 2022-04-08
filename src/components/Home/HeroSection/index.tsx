@@ -1,3 +1,4 @@
+import Router from 'next/router';
 import { useState } from 'react';
 import {
   ArrowRightIcon,
@@ -11,7 +12,6 @@ import smilingDoctorsImg from '../../../../public/images/smiling-doctors.png';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
-import Router from 'next/router';
 
 export const HeroSection = () => {
   const { t, i18n } = useTranslation();
@@ -49,7 +49,7 @@ export const HeroSection = () => {
   };
 
   i18n.on('languageChanged', function (lng) {
-    Router.reload();
+    if (window) window.location.reload();
   });
 
   return (
@@ -57,12 +57,9 @@ export const HeroSection = () => {
       <div className={styles.linearGradientBg} />
       {/* Linear Gradient Background */}
       <div className={styles.videoContainer}>
-        <iframe
-          frameBorder={0}
-          allowFullScreen
-          allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-          src="https://player.vimeo.com/video/697355493?autoplay=1&muted=1&loop=1"
-        />
+        {/* <video autoPlay muted loop>
+          <source src={heroVideo} type="video/mp4" />
+        </video> */}
       </div>
       {/* Video tocando no BG */}
       <div className={styles.heroSection}>
