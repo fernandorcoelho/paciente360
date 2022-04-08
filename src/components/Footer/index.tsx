@@ -164,7 +164,7 @@ export const Footer = () => {
       {/* Parte de cima do footer */}
 
       <div className={styles.bottomContainer}>
-        <p>Paciente 360 • 2022 Todos os direitos reservados</p>
+        <p>{t('rightsReserved')}</p>
         {width > 768 && (
           <Link href="#solucoes">
             <button type="button" className={styles.btn}>

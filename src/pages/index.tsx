@@ -52,7 +52,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home | Paciente 360º</title>
+        <title>Home | Paciente 360</title>
       </Head>
 
       <div className={styles.imageContainer}>
