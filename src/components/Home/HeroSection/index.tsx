@@ -57,9 +57,12 @@ export const HeroSection = () => {
       <div className={styles.linearGradientBg} />
       {/* Linear Gradient Background */}
       <div className={styles.videoContainer}>
-        {/* <video autoPlay muted loop>
-          <source src={heroVideo} type="video/mp4" />
-        </video> */}
+        <video autoPlay muted loop>
+          <source
+            src="../../../../public/videos/hero-video.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
       {/* Video tocando no BG */}
       <div className={styles.heroSection}>
