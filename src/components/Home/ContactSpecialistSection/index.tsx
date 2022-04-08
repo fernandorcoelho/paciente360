@@ -1,34 +1,39 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import {
   ArrowRightIcon,
   CircunferenceCircles3
 } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
-import macbookImg from '../../../../public/images/macbook.png';
-import notebookGif from '../../../../public/gifs/notebook-animation.gif';
-import notebookGifEn from '../../../../public/gifs/notebook-animation-en.gif';
-import notebookGifEs from '../../../../public/gifs/notebook-animation-es.gif';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
+import { useTranslation } from 'react-i18next';
+import macbookImg from '../../../../public/images/macbook.png';
 
 import styles from './styles.module.scss';
-import { useTranslation } from 'react-i18next';
 
 export const ContactSpecialistSection = () => {
   const { t, i18n } = useTranslation();
   const { width } = useWindowDimensions();
+  const [loading, setLoading] = useState(true);
 
   const handleNotebookVideoSrc = () => {
     switch (i18n.language) {
       case 'pt-BR':
-        return 'https://player.vimeo.com/video/697408984?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
+        return '/videos/specialist-pt.mp4';
       case 'en':
-        return 'https://player.vimeo.com/video/697408304?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
+        return '/videos/specialist-en.mp4';
       case 'es':
-        return 'https://player.vimeo.com/video/697407831?background=1&autoplay=1&autopause=0&loop=1&byline=0&title=0?title=0&byline=0&portrait=0&sidedock=0';
+        return '/videos/specialist-es.mp4';
       default:
         return;
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   return (
     <section className={styles.contactSpecialistWrapper} id="contato">
@@ -53,14 +58,18 @@ export const ContactSpecialistSection = () => {
             height={width > 768 ? 620 : 350}
             className={styles.gif}
           />
-          <iframe
-            src="https://player.vimeo.com/video/697355493?&autoplay=1&muted=1&loop=1&background=1&controls=0"
-            frameBorder="0"
-            className={styles.iframe}
-            width={width > 768 ? 500 : 250}
-            height={width > 768 ? 500 : 250}
-            title="Paciente360 Macbook Video"
-          />
+          {!loading && (
+            <video
+              autoPlay
+              muted
+              loop
+              className={styles.video}
+              width={width > 768 ? 500 : 250}
+              height={width > 768 ? 500 : 250}
+            >
+              <source src={handleNotebookVideoSrc()} type="video/mp4" />
+            </video>
+          )}
         </div>
         <CircunferenceCircles3 size={width > 768 ? 500 : 260} />
       </div>

@@ -1,15 +1,14 @@
-import Router from 'next/router';
+import Image from 'next/image';
 import { useState } from 'react';
 import {
   ArrowRightIcon,
   CircunferenceCircles
 } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
-import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
-import Image from 'next/image';
-import smilingDoctorsImg from '../../../../public/images/smiling-doctors.png';
 import { useTranslation } from 'react-i18next';
+import Typewriter, { TypewriterClass } from 'typewriter-effect';
+import smilingDoctorsImg from '../../../../public/images/smiling-doctors.png';
 
 import styles from './styles.module.scss';
 
@@ -49,7 +48,7 @@ export const HeroSection = () => {
   };
 
   i18n.on('languageChanged', function (lng) {
-    if (window) window.location.reload();
+    if (typeof window !== undefined) window.location.reload();
   });
 
   return (
@@ -58,10 +57,7 @@ export const HeroSection = () => {
       {/* Linear Gradient Background */}
       <div className={styles.videoContainer}>
         <video autoPlay muted loop>
-          <source
-            src="../../../../public/videos/hero-video.mp4"
-            type="video/mp4"
-          />
+          <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
       </div>
       {/* Video tocando no BG */}
