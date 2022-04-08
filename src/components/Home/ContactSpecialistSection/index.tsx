@@ -59,6 +59,7 @@ export const ContactSpecialistSection = () => {
             className={styles.iframe}
             width={width > 768 ? 500 : 250}
             height={width > 768 ? 500 : 250}
+            title="Paciente360 Macbook Video"
           />
         </div>
         <CircunferenceCircles3 size={width > 768 ? 500 : 260} />
