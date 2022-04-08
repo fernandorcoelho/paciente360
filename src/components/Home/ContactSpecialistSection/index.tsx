@@ -17,18 +17,18 @@ export const ContactSpecialistSection = () => {
   const { t, i18n } = useTranslation();
   const { width } = useWindowDimensions();
 
-  // const handleNotebookGifSrc = () => {
-  //   switch (i18n.language) {
-  //     case 'pt-BR':
-  //       return notebookGif;
-  //     case 'en':
-  //       return notebookGifEn;
-  //     case 'es':
-  //       return notebookGifEs;
-  //     default:
-  //       return;
-  //   }
-  // };
+  const handleNotebookVideoSrc = () => {
+    switch (i18n.language) {
+      case 'pt-BR':
+        return 'https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0';
+      case 'en':
+        return 'https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0';
+      case 'es':
+        return 'https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0';
+      default:
+        return;
+    }
+  };
 
   return (
     <section className={styles.contactSpecialistWrapper} id="contato">
@@ -54,7 +54,7 @@ export const ContactSpecialistSection = () => {
             className={styles.gif}
           />
           <iframe
-            src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0"
+            src={handleNotebookVideoSrc()}
             frameBorder="0"
             className={styles.iframe}
             width={width > 768 ? 500 : 250}
