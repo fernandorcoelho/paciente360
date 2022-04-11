@@ -62,11 +62,6 @@ export const HeroSection = () => {
       </div>
       {/* Video tocando no BG */}
       <div className={styles.heroSection}>
-        <div className={styles.mobileImgContainer}>
-          <Image src={smilingDoctorsImg} objectFit="cover" />
-          <CircunferenceCircles size={320} />
-        </div>
-
         <div className={styles.typewriterContainer}>
           <span>
             <Typewriter
@@ -87,7 +82,7 @@ export const HeroSection = () => {
         </p>
 
         <a href="https://app.paciente360.com.br/login">
-          <Button variant={width > 768 ? 'secondary' : 'tertiary'}>
+          <Button variant="secondary">
             <span>{t('tryoutForFree')}</span>
             <ArrowRightIcon />
           </Button>
