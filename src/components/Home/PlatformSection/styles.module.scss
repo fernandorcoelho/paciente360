@@ -21,6 +21,8 @@
 
   @media (max-width: 768px) {
     padding: 8.25rem 10%;
+    padding-top: 0;
+    flex-direction: column-reverse;
   }
 }
 
@@ -87,6 +89,6 @@
   width: 45rem;
 
   @media (max-width: 768px) {
-    display: none;
+    width: 100%;
   }
 }

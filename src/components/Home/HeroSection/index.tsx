@@ -1,14 +1,11 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import {
-  ArrowRightIcon,
-  CircunferenceCircles
-} from '../../../../public/icons/Icons';
+import { ArrowRightIcon } from '../../../../public/icons/Icons';
 import { Button } from '../../Button';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import { useTranslation } from 'react-i18next';
 import Typewriter, { TypewriterClass } from 'typewriter-effect';
-import smilingDoctorsImg from '../../../../public/images/smiling-doctors.png';
+import heroImg from '../../../../public/images/hero-mobile.png';
 
 import styles from './styles.module.scss';
 
@@ -47,9 +44,9 @@ export const HeroSection = () => {
       .start();
   };
 
-  i18n.on('languageChanged', function (lng) {
-    if (typeof window !== undefined) window.location.reload();
-  });
+  // i18n.on('languageChanged', function (lng) {
+  //   if (typeof window !== undefined) window.location.reload();
+  // });
 
   return (
     <main className={styles.heroSectionContainer} id="solucoes">
@@ -61,6 +58,16 @@ export const HeroSection = () => {
         </video>
       </div>
       {/* Video tocando no BG */}
+      {width !== 0 && width < 768 && (
+        <div className={styles.mobileImg}>
+          <Image
+            src={heroImg}
+            alt="Sala com laptop do app aberto"
+            objectFit="cover"
+            height={800}
+          />
+        </div>
+      )}
       <div className={styles.heroSection}>
         <div className={styles.typewriterContainer}>
           <span>

@@ -21,12 +21,21 @@
   margin: 0 auto;
   padding: 8.5rem 10% 9.375rem;
 
+  @media (max-width: 768px) {
+    align-items: center;
+    gap: 0;
+  }
+
   > span {
     font-weight: 400;
     font-size: 2.813rem;
     line-height: 2.5rem;
     color: var(--gray-600);
     max-width: 26.75rem;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
 
     > strong {
       color: var(--blue-600);
@@ -37,5 +46,9 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
     color: var(--gray-500);
+
+    @media (max-width: 768px) {
+      margin-top: 1.563rem;
+    }
   }
 }
