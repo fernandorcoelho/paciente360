@@ -34,7 +34,7 @@
 
   @media (max-width: 768px) {
     display: grid;
-    row-gap: 4.813rem;
+    // row-gap: 4.813rem;
     column-gap: 4.375rem;
     grid-template-areas:
       "a a a a"
@@ -52,6 +52,7 @@
 
     @media (max-width: 768px) {
       width: 100%;
+      margin-bottom: 4.813rem;
 
       > span {
         align-self: center;

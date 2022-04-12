@@ -35,7 +35,7 @@ export const ContinentsSection = () => {
         initial="hidden"
         variants={counterVariants}
       >
-        {inView && <CountUp end={end} duration={2.75} delay={0} />}
+        {inView && <CountUp end={end} duration={1.5} delay={0} />}
       </motion.div>
     );
   }

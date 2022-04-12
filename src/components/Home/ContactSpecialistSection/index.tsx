@@ -64,8 +64,8 @@ export const ContactSpecialistSection = () => {
               muted
               loop
               className={styles.video}
-              width={width > 768 ? 500 : 250}
-              height={width > 768 ? 500 : 250}
+              width={width > 768 ? 500 : width >= 375 ? 240 : 220}
+              height={width > 768 ? 500 : width >= 375 ? 240 : 220}
             >
               <source src={handleNotebookVideoSrc()} type="video/mp4" />
             </video>
