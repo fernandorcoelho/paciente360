@@ -18,6 +18,7 @@ import { DifferentialsSection } from '../components/Home/DifferentialsSection';
 import { ContactSpecialistSection } from '../components/Home/ContactSpecialistSection';
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import { useTranslation } from 'react-i18next';
+import MetaTags from 'components/MetaTags/MetaTags';
 
 const Home: NextPage = () => {
   const { width } = useWindowDimensions();
@@ -51,9 +52,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Home | Paciente 360</title>
-      </Head>
+      <MetaTags
+        title="Home | Paciente 360"
+        description="A única plataforma de simulação de casos clínicos com pessoas reais no mundo.
+        Utilizamos o ambiente digital para oferecer uma ferramenta que amplia o acesso à educação em saúde, de forma prática, interativa e de forma humanizada, com interações da experiência real."
+        image="/public/images/hero-mobile.png"
+      />
 
       <div className={styles.imageContainer}>
         <Image
