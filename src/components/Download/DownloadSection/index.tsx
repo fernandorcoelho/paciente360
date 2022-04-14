@@ -37,7 +37,7 @@ export const DownloadSection = () => {
         </div>
 
         <div>
-          <a href="/">
+          <a href="https://paciente360app.s3.sa-east-1.amazonaws.com/2-MAC-OS-Paciente360-3.0.0.zip">
             <Button variant="download">
               <AppleLogo />
               <span>
@@ -46,7 +46,7 @@ export const DownloadSection = () => {
               </span>
             </Button>
           </a>
-          <a href="/">
+          <a href="https://www.microsoft.com/pt-br/p/paciente-360/9n514pxh78gg">
             <Button variant="download">
               <MicrosoftLogo />
               <span>
