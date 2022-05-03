@@ -27,10 +27,6 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           {/* Google Tag Manager */}
           <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-127061973-1%22%3E"
-          />
-          <script
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
