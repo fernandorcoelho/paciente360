@@ -68,6 +68,11 @@ export function Header() {
       id: 5,
       text: t('contact'),
       link: 'https://conteudo.paciente360.com.br/contato'
+    },
+    {
+      id: 5,
+      text: 'Blog',
+      link: 'https://blog.paciente360.com.br/'
     }
   ];
 
@@ -96,10 +101,12 @@ export function Header() {
             <nav>
               <ul>
                 {navItemsArr.map((item) => (
-                  <Link key={item.id} href={item.link}>
-                    <li>
-                      <p>{item.text}</p>
-                    </li>
+                  <Link key={item.id} href={item.link} passHref>
+                    <a target="_blank">
+                      <li>
+                        <p>{item.text}</p>
+                      </li>
+                    </a>
                   </Link>
                 ))}
               </ul>

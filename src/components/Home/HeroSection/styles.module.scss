@@ -31,7 +31,7 @@
   width: 100%;
   height: calc(100vh - 8.5rem);
   margin: 0 auto;
-  padding: 3rem 10%;
+  padding: 3rem 8%;
 
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
 
   @media (max-width: 768px) {
     height: 100%;
-    padding: 0 10% 7.25rem;
+    padding: 0 8% 7.25rem;
     align-items: center;
   }
 

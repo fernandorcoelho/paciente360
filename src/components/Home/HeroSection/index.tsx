@@ -44,9 +44,9 @@ export const HeroSection = () => {
       .start();
   };
 
-  // i18n.on('languageChanged', function (lng) {
-  //   if (typeof window !== undefined) window.location.reload();
-  // });
+  i18n.on('languageChanged', function (lng) {
+    if (typeof window !== undefined) window.location.reload();
+  });
 
   return (
     <main className={styles.heroSectionContainer} id="solucoes">
