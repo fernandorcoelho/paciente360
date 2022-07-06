@@ -37,7 +37,7 @@ export const DownloadSection = () => {
         </div>
 
         <div>
-          <a href="https://paciente360app.s3.sa-east-1.amazonaws.com/2-MAC-OS-Paciente360-3.0.0.zip">
+          <a href="https://paciente360app.s3.sa-east-1.amazonaws.com/2-MAC-OS-Paciente360-3.0.1.zip">
             <Button variant="download">
               <AppleLogo />
               <span>
