@@ -1,0 +1,109 @@
+.primary,
+.secondary,
+.tertiary,
+.download {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  flex-shrink: 0;
+  font: 500 1rem 'DM Sans';
+  line-height: 0.875rem;
+  position: relative;
+  z-index: 10 !important;
+
+  > svg path {
+    transition: ease-in 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.15rem;
+
+    > svg {
+      width: 1rem;
+    }
+  }
+
+  transition: ease-in 0.3s;
+}
+
+.primary {
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+  border-radius: 4px;
+  border: 0;
+  background-color: white;
+  border: 1px solid var(--red-500);
+  color: var(--red-500);
+  padding: 0 1rem;
+  white-space: nowrap;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+.secondary {
+  justify-content: space-between;
+  gap: 1.75rem;
+  height: 3rem;
+  border-radius: 6px;
+  border: 1px solid var(--red-500);
+  background-color: transparent;
+  color: var(--gray-500);
+  font-weight: 700;
+  padding: 0 2.813rem;
+  white-space: nowrap;
+
+  &:hover {
+    border: 1px solid var(--red-500);
+    background-color: var(--red-500);
+    color: var(--white);
+
+    > svg path {
+      stroke: var(--white);
+    }
+  }
+}
+
+.tertiary {
+  justify-content: space-between;
+  gap: 1.75rem;
+  height: 3rem;
+  border-radius: 6px;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+  font-weight: 700;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+.download {
+  text-align: start;
+  gap: 0.875rem;
+  padding: 1rem 2.15rem;
+
+  font-weight: 400;
+  background: var(--white);
+  color: var(--gray-900);
+  border: 3.77px solid #e8e8e8;
+  box-shadow: 0px 62.2165px 96.1528px rgba(0, 0, 0, 0.08),
+    0px 18.7565px 28.9873px rgba(0, 0, 0, 0.0582218),
+    0px 7.79047px 12.0398px rgba(0, 0, 0, 0.0399899),
+    0px 2.81766px 4.35457px rgba(0, 0, 0, 0.0268173);
+  border-radius: 7.5px;
+
+  strong {
+    font-size: 1.25rem;
+  }
+
+  &:hover {
+    background: #000;
+    color: var(--white);
+
+    > svg path {
+      fill: var(--white);
+    }
+  }
+}

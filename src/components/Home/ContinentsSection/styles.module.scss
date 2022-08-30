@@ -88,6 +88,19 @@
       color: var(--white);
     }
   }
+
+  div:first-child {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white !important;
+    font-size: 11px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 
 .linearGradientBg {
@@ -97,7 +110,14 @@
 
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to left, #fc7562, #fc6f5b, #fc6955, #fb634e, #fb5c47);
+  background-image: linear-gradient(
+    to left,
+    #fc7562,
+    #fc6f5b,
+    #fc6955,
+    #fb634e,
+    #fb5c47
+  );
 }
 
 .imageContainer {

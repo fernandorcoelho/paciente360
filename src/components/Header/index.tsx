@@ -11,6 +11,7 @@ import { LanguagesButton } from './LanguagesButton';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
+import { ButtonAssinatura } from 'components/ButtonAssinatura';
 
 type NavItemsProps = {
   id: number;
@@ -115,6 +116,11 @@ export function Header() {
             <div>
               <LanguagesButton />
 
+              <a href="https://conteudo.paciente360.com.br/lp_b2c">
+                <ButtonAssinatura>
+                  <span>{t('getSubscription')}</span>
+                </ButtonAssinatura>
+              </a>
               <a href="https://app.paciente360.com.br/login">
                 <Button>
                   <span>{t('accessPlatform')}</span>

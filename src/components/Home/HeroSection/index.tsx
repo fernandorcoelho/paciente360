@@ -1,101 +1,33 @@
-import Image from 'next/image';
-import { useState } from 'react';
-import { ArrowRightIcon } from '../../../../public/icons/Icons';
-import { Button } from '../../Button';
-import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import { useTranslation } from 'react-i18next';
-import Typewriter, { TypewriterClass } from 'typewriter-effect';
-import heroImg from '../../../../public/images/hero-mobile.png';
 
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
+import { ArrowRight } from 'assets/icons/Icons';
+import { Button } from 'components/Form/Button';
+
 export const HeroSection = () => {
-  const { t, i18n } = useTranslation();
-  const { width } = useWindowDimensions();
-
-  const [textElContent, setTextElContent] = useState('');
-
-  const handleChangeSecondText = (i: number) => {
-    if (i === 0) {
-      setTextElContent(t('interativos'));
-    } else if (i === 1) {
-      setTextElContent(t('reais'));
-    } else if (i === 2) {
-      setTextElContent(t('humanizados'));
-    }
-  };
-
-  const handleTypewriterSettings = (typewriter: TypewriterClass) => {
-    typewriter
-      .callFunction(() => handleChangeSecondText(0))
-      .typeString(t('casosClinicos'))
-      .pauseFor(2500)
-      .deleteAll()
-      .start()
-      .callFunction(() => handleChangeSecondText(1))
-      .typeString(t('comportamentos'))
-      .pauseFor(2500)
-      .deleteAll()
-      .start()
-      .callFunction(() => handleChangeSecondText(2))
-      .typeString(t('pacientes'))
-      .pauseFor(2500)
-      .deleteAll()
-      .start();
-  };
-
-  i18n.on('languageChanged', function (lng) {
-    if (typeof window !== undefined) window.location.reload();
-  });
+  const { t } = useTranslation();
 
   return (
-    <main className={styles.heroSectionContainer} id="solucoes">
-      <div className={styles.linearGradientBg} />
-      {/* Linear Gradient Background */}
-      <div className={styles.videoContainer}>
-        <video autoPlay muted loop>
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+    <div className={styles.container}>
+      <video autoPlay muted loop>
+        <source src="/videos/hero.mp4" type="video/mp4" />
+      </video>
+      <div className={styles.messageContainer}>
+        <h1 className={styles.heading}>
+          {t('home.technology.heading.text1')}{' '}
+          <strong>{t('home.technology.heading.text2')}</strong>
+        </h1>
+        <p className={styles.text}>{t('home.technology.description')}</p>
+        <Link href="/contato">
+          <button className={styles.button}>
+            {t('button.test')} <ArrowRight />
+          </button>
+        </Link>
       </div>
-      {/* Video tocando no BG */}
-      {width !== 0 && width < 768 && (
-        <div className={styles.mobileImg}>
-          <Image
-            src={heroImg}
-            alt="Sala com laptop do app aberto"
-            objectFit="cover"
-            height={800}
-          />
-        </div>
-      )}
-      <div className={styles.heroSection}>
-        <div className={styles.typewriterContainer}>
-          <span>
-            <Typewriter
-              options={{
-                autoStart: true,
-                loop: true
-              }}
-              onInit={(typewriter) => handleTypewriterSettings(typewriter)}
-            />
-          </span>
-          {/* Typewriter */}
-          <span>{textElContent}</span> {/* Texto à direita dinâmico */}
-        </div>
 
-        <p>
-          {t('heroText1')} <strong>{t('heroText2')}</strong> {t('heroText3')}{' '}
-          <strong>{t('heroText4')}</strong>.
-        </p>
-
-        <a href="https://app.paciente360.com.br/login">
-          <Button variant="secondary">
-            <span>{t('tryoutForFree')}</span>
-            <ArrowRightIcon />
-          </Button>
-        </a>
-      </div>
-      {/* Seção informativa */}
-    </main>
+      <div className={styles.linearGradient}></div>
+    </div>
   );
 };

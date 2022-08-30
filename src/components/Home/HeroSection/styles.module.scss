@@ -1,129 +1,113 @@
-.heroSectionContainer {
+.container {
   position: relative;
   z-index: 10;
-  background-color: var(--white);
-  height: 100vh;
-
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    height: auto;
-  }
-}
-
-.linearGradientBg {
-  position: absolute;
-  z-index: 1;
-
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(77.95deg, #ffffff 25%, rgba(255, 255, 255, 0.5) 54.65%, rgba(255, 255, 255, 0) 72.68%);
-
-  @media (max-width: 768px) {
-    height: 100vh;
-    background: linear-gradient(0deg, #ffffff 30%, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0) 40%);
-  }
-}
-
-.heroSection {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 8.5rem);
-  margin: 0 auto;
-  padding: 3rem 8%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 2.125rem;
-
-  z-index: 2;
-
-  @media (max-width: 768px) {
-    height: 100%;
-    padding: 0 8% 7.25rem;
-    align-items: center;
-  }
-
-  p {
-    font-size: 1.5rem;
-    color: var(--gray-600);
-    max-width: 24rem;
-
-    @media (max-width: 768px) {
-      text-align: center;
-      align-self: center;
-    }
-  }
-
-  > button {
-    @media (max-width: 768px) {
-      align-self: center;
-    }
-  }
-}
-
-.typewriterContainer {
-  height: 2.25rem;
-  padding: 0 0.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  background-color: var(--white);
-  font-size: 1.438rem;
-  font-weight: 700;
-  color: var(--gray-600);
-
-  @media (max-width: 768px) {
-    margin: 2rem 0;
-  }
-
-  > span:last-of-type {
-    color: var(--white);
-    background-color: var(--blue-700);
-    padding: 0 0.3rem;
-    margin-left: 0.3rem;
-    border-radius: 3px;
-  }
-}
-
-.videoContainer {
-  position: absolute;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
 
-  z-index: 0;
-
-  @media (max-width: 768px) {
-    display: none;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    height: 100%;
   }
 
   > video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+    width: 100%;
 
-    @media (min-aspect-ratio: 16/9) {
-      /* height = 100 * (9 / 16) = 56.25 */
-      height: 56.25vw;
-    }
-
-    @media (max-aspect-ratio: 16/9) {
-      /* width = 100 / (9 / 16) = 177.777777 */
-      width: 177.78vh;
+    @media (min-width: 768px) {
+      position: absolute;
+      right: -220px;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
     }
   }
 }
 
-.mobileImg {
+.messageContainer {
   position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+  max-width: 50%;
+  padding: 7.5rem 10%;
+  padding-right: 0;
+
+  @media (max-width: 767px) {
+    padding: 8.25rem 10%;
+    padding-top: 0;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 2.813rem;
+  line-height: 2.5rem;
+  color: var(--gray-600);
+  max-width: 32.813rem;
+
+  @media (max-width: 767px) {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+    max-width: 20rem;
+  }
+
+  strong {
+    color: var(--blue-600);
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--gray-500);
+  margin: 1.625rem 0 4.75rem;
+}
+
+.linearGradient {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    77.95deg,
+    #ffffff 25%,
+    rgba(255, 255, 255, 0.5) 54.65%,
+    rgba(255, 255, 255, 0) 72.68%
+  );
+
+  @media (max-width: 767px) {
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      #ffffff 0%,
+      white 76%,
+      rgba(255, 255, 255, 0) 83%
+    );
+  }
+}
+
+.button {
+  padding: 0 1.75rem;
+  width: fit-content;
+  border-radius: 4px;
+  height: 2.5rem;
+  gap: 0.5rem;
+  background: white !important;
+  font-weight: 500;
+  border: 1px solid var(--red-500) !important;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 1.125rem;
 }

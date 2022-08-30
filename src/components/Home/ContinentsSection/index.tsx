@@ -52,16 +52,20 @@ export const ContinentsSection = () => {
 
         <div className={styles.dataContainer}>
           <div>
-            <strong>
-              <span>+</span>
-              {DinamicCountUp(600)}
-            </strong>
+            <div>
+              <strong>
+                <span>+</span>
+                {DinamicCountUp(600)}
+              </strong>
 
-            <strong>
-              {t('cases1')}
-              <br />
-              {t('cases2')}
-            </strong>
+              <strong>
+                {t('cases1')}
+                <br />
+                {t('cases2')}
+              </strong>
+            </div>
+
+            <p>* Para assinaturas individuais estão liberados 200 casos <br/>clínicos, com liberação de 5 novos casos por mês.</p>
           </div>
 
           <div>

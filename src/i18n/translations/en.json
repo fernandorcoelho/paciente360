@@ -10,6 +10,7 @@
     "heroText2": "only clinical case simulation platform",
     "heroText3": "with real people",
     "heroText4": "in the world",
+    "getSubscription": "Subscription",
     "tryoutForFree": "Evaluate for free",
     "platformHead1": "Innovative technology to transform",
     "platformHead2": "health education",
@@ -76,6 +77,33 @@
     "teste": "EN-US",
     "downloadHead1": "",
     "downloadHead2": "Download",
-    "downloadHead3": "the Patient360® app on Windows or Mac now!"
+    "downloadHead3": "the Patient360® app on Windows or Mac now!",
+
+    "button": {
+      "tryout": "Avalie gratuitamente",
+      "access": "Acessar plataforma",
+      "signUp": "Assine já!",
+      "subscription": "Assine já!",
+      "test": "Faça um teste agora mesmo",
+      "knowMore": "Saiba mais"
+    },
+
+    "home": {
+      "hero": {
+        "heading": "Your patient has arrived!",
+        "description": {
+          "text1": "Now you don't have to",
+          "text2": "leave home to follow",
+          "text3": "an outpatient clinic."
+        }
+      },
+      "technology": {
+        "heading": {
+          "text1": "Innovative technology to transform the",
+          "text2": "health education"
+        },
+        "description": "We use the digital environment to offer a tool that expands access to health education, in a practical, interactive and humanized way, with interactions from the real experience."
+      }
+    }
   }
 }

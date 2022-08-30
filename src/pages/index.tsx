@@ -18,6 +18,7 @@ import { ContactSpecialistSection } from '../components/Home/ContactSpecialistSe
 import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import { useTranslation } from 'react-i18next';
 import MetaTags from 'components/MetaTags/MetaTags';
+import BannerHome from 'components/Home/BannerHome';
 
 const Home: NextPage = () => {
   const { width } = useWindowDimensions();
@@ -58,14 +59,16 @@ const Home: NextPage = () => {
         image="/public/images/hero-mobile.png"
       />
 
-      <div className={styles.imageContainer}>
-        <Image
-          src={handleBackgroundImageSrc()}
-          objectFit="cover"
-          alt="Foto de Denise com diagnóstico"
-        />
-      </div>
 
+      {/* <div className={styles.imageContainer}>
+        <Image
+        src={handleBackgroundImageSrc()}
+        objectFit="cover"
+        alt="Foto de Denise com diagnóstico"
+        />
+      </div> */}
+
+      <BannerHome />
       <HeroSection />
       <PlatformSection />
       <SegmentsSection />

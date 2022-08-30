@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
@@ -9,6 +8,8 @@ import { useWindowDimensions } from 'hooks/useWindowDimensions';
 import { useTranslation } from 'react-i18next';
 
 import styles from './styles.module.scss';
+import { useEffect } from 'react';
+import Link from 'next/link';
 
 export const TryoutSection = () => {
   const { t } = useTranslation();
@@ -43,12 +44,12 @@ export const TryoutSection = () => {
           {t('tryoutHead3')}
         </span>
 
-        <a href="https://app.paciente360.com.br/login">
-          <Button variant="secondary">
+        <Button variant="secondary">
+          <Link href="/contato">
             <span>{t('tryoutForFree')}</span>
-            <ArrowRightIcon />
-          </Button>
-        </a>
+          </Link>
+          <ArrowRightIcon />
+        </Button>
       </motion.div>
     );
   }
