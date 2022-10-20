@@ -116,7 +116,7 @@ export function Header() {
             <div>
               <LanguagesButton />
 
-              <a href="https://conteudo.paciente360.com.br/lp_b2c">
+              <a href="https://conteudo.paciente360.com.br/p360-lp">
                 <ButtonAssinatura>
                   <span>{t('getSubscription')}</span>
                 </ButtonAssinatura>

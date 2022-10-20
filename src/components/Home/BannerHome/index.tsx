@@ -17,7 +17,7 @@ export default function BannerHome() {
           <p>{t('home.hero.description.text3')}</p>
         </div>
       </div>
-      <Link href="https://conteudo.paciente360.com.br/lp_b2c">
+      <Link href="https://conteudo.paciente360.com.br/p360-lp">
         <button style={{ position: 'relative', left: '17px' }}>
           {t('button.signUp')}
         </button>
